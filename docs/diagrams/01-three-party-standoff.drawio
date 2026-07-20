@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="drawio" version="26.0.0">
+  <diagram name="standoff">
+    <mxGraphModel background="#0a0f1c">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="lab" value="AI Lab  (DO1)&#xa;holds: private model weights&#xa;fear: weights leak" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a2233;strokeColor=#8b98ab;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="60" width="320" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="org" value="Local Safety Org  (DO2)&#xa;holds: private VN harms benchmark&#xa;fear: lab trains on the test" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a2233;strokeColor=#8b98ab;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="720" y="60" width="320" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="aud" value="Auditor  (DS)&#xa;holds: eval code&#xa;wants: one trustworthy score" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a2233;strokeColor=#8b98ab;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="400" y="450" width="320" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="q" value="Where can&#xa;three secrets&#xa;meet?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#2e250f;strokeColor=#d7b357;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="420" y="210" width="280" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="mutual distrust" style="endArrow=classic;startArrow=classic;endFill=1;startFill=1;dashed=1;html=1;strokeColor=#e06c75;fontColor=#e06c75;fontFamily=Courier New;fontSize=11;labelBackgroundColor=#0a0f1c;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="lab" target="org">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="won't ship weights" style="endArrow=classic;startArrow=classic;endFill=1;startFill=1;dashed=1;html=1;strokeColor=#e06c75;fontColor=#e06c75;fontFamily=Courier New;fontSize=11;labelBackgroundColor=#0a0f1c;exitX=0.5;exitY=1;entryX=0;entryY=0.5;" edge="1" parent="1" source="lab" target="aud">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="won't reveal prompts" style="endArrow=classic;startArrow=classic;endFill=1;startFill=1;dashed=1;html=1;strokeColor=#e06c75;fontColor=#e06c75;fontFamily=Courier New;fontSize=11;labelBackgroundColor=#0a0f1c;exitX=0.5;exitY=1;entryX=1;entryY=0.5;" edge="1" parent="1" source="org" target="aud">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

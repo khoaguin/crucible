@@ -1,0 +1,74 @@
+<mxfile host="65bd71144e">
+    <diagram id="seqlayout" name="one-audit">
+        <mxGraphModel dx="651" dy="253" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#0a0f1c" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="lab" value="AI Lab (DO1)" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;size=40;fillColor=#0c2530;strokeColor=#2dd4bf;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="40" width="100" height="790" as="geometry"/>
+                </mxCell>
+                <mxCell id="org" value="Safety Org (DO2)" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;size=40;fillColor=#0c2530;strokeColor=#2dd4bf;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="40" width="100" height="790" as="geometry"/>
+                </mxCell>
+                <mxCell id="aud" value="Auditor (DS)" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;size=40;fillColor=#0c2530;strokeColor=#2dd4bf;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="40" width="100" height="790" as="geometry"/>
+                </mxCell>
+                <mxCell id="act1" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;fillColor=#2dd4bf;strokeColor=#0c2530;" parent="aud" vertex="1">
+                    <mxGeometry x="45" y="630" width="10" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="enc" value="Crucible Enclave" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;size=40;fillColor=#0c2530;strokeColor=#2dd4bf;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="40" width="100" height="790" as="geometry"/>
+                </mxCell>
+                <mxCell id="act0" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;fillColor=#2dd4bf;strokeColor=#0c2530;" parent="enc" vertex="1">
+                    <mxGeometry x="45" y="150" width="10" height="480" as="geometry"/>
+                </mxCell>
+                <mxCell id="note0" value="boots · publishes attestation&#xa;(EAT JWT) + fresh keys" style="shape=note;whiteSpace=wrap;html=1;size=14;fillColor=#2e250f;strokeColor=#d7b357;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="700" y="100" width="140" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="m1" value="1. verify attestation, upload encrypted weights" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeColor=#9fb0c3;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=11;labelBackgroundColor=#0a0f1c;exitX=0.5;exitY=0.1899;entryX=0;entryY=0.0;" parent="1" source="lab" target="act0" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="m2" value="2. verify attestation, upload encrypted benchmark" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeColor=#9fb0c3;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=11;labelBackgroundColor=#0a0f1c;exitX=0.5;exitY=0.2532;entryX=0;entryY=0.1042;" parent="1" source="org" target="act0" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="m3" value="3. submit eval code (AuditJob)" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeColor=#9fb0c3;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=11;labelBackgroundColor=#0a0f1c;exitX=0.5;exitY=0.3165;entryX=0;entryY=0.2083;" parent="1" source="aud" target="act0" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="m4" value="4a. forward eval code for review" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;curved=0;rounded=0;strokeColor=#d7b357;fontColor=#d7b357;fontFamily=Courier New;fontSize=11;labelBackgroundColor=#0a0f1c;exitX=0;exitY=0.3125;entryX=0.5;entryY=0.3797;" parent="1" source="act0" target="lab" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="m5" value="4b. forward eval code for review" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;curved=0;rounded=0;strokeColor=#d7b357;fontColor=#d7b357;fontFamily=Courier New;fontSize=11;labelBackgroundColor=#0a0f1c;exitX=0;exitY=0.4167;entryX=0.5;entryY=0.443;" parent="1" source="act0" target="org" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="m6" value="5a. approve" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeColor=#9fb0c3;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=11;labelBackgroundColor=#0a0f1c;exitX=0.5;exitY=0.5063;entryX=0;entryY=0.5208;" parent="1" source="lab" target="act0" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="m7" value="5b. approve (either could veto)" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeColor=#9fb0c3;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=11;labelBackgroundColor=#0a0f1c;exitX=0.5;exitY=0.5696;entryX=0;entryY=0.625;" parent="1" source="org" target="act0" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="m8" value="6. run: load-run-grade-aggregate&#xa;(sealed memory)" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeColor=#9fb0c3;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=11;labelBackgroundColor=#0a0f1c;exitX=1;exitY=0.7292;entryX=1;entryY=0.7917;" parent="1" source="act0" target="act0" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="750" y="540"/>
+                            <mxPoint x="750" y="570"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="note9" value="prompts x weights meet&#xa;here - and ONLY here" style="shape=note;whiteSpace=wrap;html=1;size=14;fillColor=#2e250f;strokeColor=#d7b357;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="710" y="590" width="140" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="m10" value="7. signed Scorecard + attestation cert" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeColor=#9fb0c3;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=11;labelBackgroundColor=#0a0f1c;exitX=0;exitY=1.0;entryX=1;entryY=0.0;" parent="1" source="act0" target="act1" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="m11" value="8. crucible verify -&gt; OK" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeColor=#9fb0c3;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=11;labelBackgroundColor=#0a0f1c;exitX=1;exitY=0.4167;entryX=1;entryY=0.6667;" parent="1" source="act1" target="act1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="550" y="720"/>
+                            <mxPoint x="550" y="750"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
