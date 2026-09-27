@@ -1,0 +1,9 @@
+__pycache__/
+.claude/settings.local.json
+
+# Upstream clones for the refs-knowledge skill: where they live is per machine.
+.claude/skills/update-refs-knowledge/repos.local.toml
+.refs-repos/
+
+# refs-knowledge: plan snapshot is per-build scratch; the ledger (state.json) is tracked.
+.refs-knowledge/.plan.json
