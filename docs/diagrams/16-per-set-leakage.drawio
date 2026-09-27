@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="drawio" version="26.0.0">
+  <diagram name="per-set-leakage">
+    <mxGraphModel background="#0a0f1c">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="Can one owner infer another&#39;s score? Only at K=2." style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=17;fontColor=#dbe4f0;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="20" width="1170" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="K benchmark owners stake private prompt sets against one model. Each owner gets its own set&#39;s score sealed to it, plus a combined score everyone sees.&#xa;The only leak channel is arithmetic on that combined value — so the answer is decided entirely by K." style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=12;fontColor=#9fb0c3;" vertex="1" parent="1">
+          <mxGeometry x="30" y="50" width="1170" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- ===================== PANEL K = 2 ===================== -->
+        <mxCell id="p2" value="K = 2  —  UNSAFE BY ARITHMETIC" style="swimlane;startSize=36;fillColor=#2e1414;swimlaneFillColor=#141b29;strokeColor=#f87171;fontColor=#f87171;fontFamily=Courier New;fontSize=14;fontStyle=1;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="100" width="370" height="560" as="geometry" />
+        </mxCell>
+        <mxCell id="p2know" value="WHAT THE CURIOUS OWNER A HOLDS&#xa;&#xa;  own_A    = 0.80   (sealed to A)&#xa;  combined = 0.70   (public)" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;fillColor=#1a2233;strokeColor=#8b98ab;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" vertex="1" parent="p2">
+          <mxGeometry x="16" y="48" width="338" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="p2eq" value="THE EQUATION IT CAN WRITE&#xa;&#xa;  combined = (own_A + own_B) / 2" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;fillColor=#0c2530;strokeColor=#2dd4bf;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" vertex="1" parent="p2">
+          <mxGeometry x="16" y="142" width="338" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="p2unk" value="1 equation  ·  1 unknown" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#2e1414;strokeColor=#f87171;fontColor=#f87171;fontFamily=Courier New;fontSize=14;fontStyle=1;" vertex="1" parent="p2">
+          <mxGeometry x="16" y="220" width="338" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="p2work" value="SOLVE IT&#xa;&#xa;own_B = 2 × combined − own_A&#xa;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;= 2 × 0.70 − 0.80&#xa;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;= 0.60&#xa;&#xa;B&#39;s private score, read off exactly.&#xa;No attack, no crypto break — the&#xa;combined value simply carries it." style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;fillColor=#1a2233;strokeColor=#f87171;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" vertex="1" parent="p2">
+          <mxGeometry x="16" y="282" width="338" height="176" as="geometry" />
+        </mxCell>
+        <mxCell id="p2verd" value="EXACT RECOVERY&#xa;disclose openly at K=2 — or accept it" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#2e1414;strokeColor=#f87171;strokeWidth=2;fontColor=#f87171;fontFamily=Courier New;fontSize=13;fontStyle=1;" vertex="1" parent="p2">
+          <mxGeometry x="16" y="474" width="338" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- ===================== PANEL K = 3 ===================== -->
+        <mxCell id="p3" value="K = 3  —  RESISTS SINGLE-PARTY INFERENCE" style="swimlane;startSize=36;fillColor=#33240a;swimlaneFillColor=#141b29;strokeColor=#e8b339;fontColor=#e8b339;fontFamily=Courier New;fontSize=14;fontStyle=1;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="430" y="100" width="370" height="560" as="geometry" />
+        </mxCell>
+        <mxCell id="p3know" value="WHAT THE CURIOUS OWNER A HOLDS&#xa;&#xa;  own_A    = 1.00   (sealed to A)&#xa;  combined = 0.95   (public)" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;fillColor=#1a2233;strokeColor=#8b98ab;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" vertex="1" parent="p3">
+          <mxGeometry x="16" y="48" width="338" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="p3eq" value="THE EQUATION IT CAN WRITE&#xa;&#xa;  combined = (own_A + a + b) / 3" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;fillColor=#0c2530;strokeColor=#2dd4bf;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" vertex="1" parent="p3">
+          <mxGeometry x="16" y="142" width="338" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="p3unk" value="1 equation  ·  2 unknowns" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#33240a;strokeColor=#e8b339;fontColor=#e8b339;fontFamily=Courier New;fontSize=14;fontStyle=1;" vertex="1" parent="p3">
+          <mxGeometry x="16" y="220" width="338" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="p3work" value="NO EXACT SOLUTION — BUT SEE THE EDGE&#xa;(three equal-sized sets)&#xa;&#xa;  a + b = 3 × 0.95 − 1.00 = 1.85&#xa;  mean(a, b) = 0.925&#xa;&#xa;no score exceeds 1.00, so&#xa;  a &amp;ge; 0.85   and   b &amp;ge; 0.85&#xa;&#xa;the value is hidden; the interval is not." style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;fillColor=#1a2233;strokeColor=#e8b339;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" vertex="1" parent="p3">
+          <mxGeometry x="16" y="282" width="338" height="176" as="geometry" />
+        </mxCell>
+        <mxCell id="p3verd" value="NO EXACT RECOVERY&#xa;bounded interval leak at extremes" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#33240a;strokeColor=#e8b339;strokeWidth=2;fontColor=#e8b339;fontFamily=Courier New;fontSize=13;fontStyle=1;" vertex="1" parent="p3">
+          <mxGeometry x="16" y="474" width="338" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- ===================== PANEL K = 4 ===================== -->
+        <mxCell id="p4" value="K = 4  —  THE SAME, WITH MORE ROOM" style="swimlane;startSize=36;fillColor=#0a2b1e;swimlaneFillColor=#141b29;strokeColor=#34d399;fontColor=#34d399;fontFamily=Courier New;fontSize=14;fontStyle=1;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="830" y="100" width="370" height="560" as="geometry" />
+        </mxCell>
+        <mxCell id="p4know" value="WHAT THE CURIOUS OWNER A HOLDS&#xa;&#xa;  own_A    = 0.80   (sealed to A)&#xa;  combined = 0.70   (public)" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;fillColor=#1a2233;strokeColor=#8b98ab;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" vertex="1" parent="p4">
+          <mxGeometry x="16" y="48" width="338" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="p4eq" value="THE EQUATION IT CAN WRITE&#xa;&#xa;  combined = (own_A + a + b + c) / 4" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;fillColor=#0c2530;strokeColor=#2dd4bf;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" vertex="1" parent="p4">
+          <mxGeometry x="16" y="142" width="338" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="p4unk" value="1 equation  ·  3 unknowns" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#0a2b1e;strokeColor=#34d399;fontColor=#34d399;fontFamily=Courier New;fontSize=14;fontStyle=1;" vertex="1" parent="p4">
+          <mxGeometry x="16" y="220" width="338" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="p4work" value="ONE CONSTRAINT, THREE FREE VARIABLES&#xa;&#xa;  a + b + c = 4 × 0.70 − 0.80 = 2.00&#xa;&#xa;only the sum is pinned. Each extra owner&#xa;adds a free variable, so the interval on&#xa;any single score only widens with K.&#xa;&#xa;RESIDUAL (secret-sharing shaped): if the&#xa;other K−1 owners pool their own scores,&#xa;the last owner&#39;s score falls out exactly." style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;fillColor=#1a2233;strokeColor=#34d399;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" vertex="1" parent="p4">
+          <mxGeometry x="16" y="282" width="338" height="176" as="geometry" />
+        </mxCell>
+        <mxCell id="p4verd" value="NO EXACT RECOVERY&#xa;K−1 colluders recover the last owner" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#0a2b1e;strokeColor=#34d399;strokeWidth=2;fontColor=#34d399;fontFamily=Courier New;fontSize=13;fontStyle=1;" vertex="1" parent="p4">
+          <mxGeometry x="16" y="474" width="338" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- ===================== BOTTOM BAND ===================== -->
+        <mxCell id="band" value="STANDING FACTS — TRUE AT EVERY K" style="swimlane;startSize=36;fillColor=#221a33;swimlaneFillColor=#141b29;strokeColor=#a78bfa;fontColor=#a78bfa;fontFamily=Courier New;fontSize=14;fontStyle=1;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="690" width="1170" height="132" as="geometry" />
+        </mxCell>
+        <mxCell id="bd1" value="DISCLOSURE POLICY&#xa;&#xa;  per_set[i]  →  sealed to owner i&#xa;  combined    →  visible to everyone" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;fillColor=#0c2530;strokeColor=#2dd4bf;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" vertex="1" parent="band">
+          <mxGeometry x="20" y="46" width="558" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bd2" value="SCORES DO NOT ACCUMULATE ACROSS AUDITS&#xa;&#xa;a new model means a fresh set of unknowns — repeated&#xa;audits never converge on anyone&#39;s prompt set." style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;fillColor=#221a33;strokeColor=#a78bfa;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" vertex="1" parent="band">
+          <mxGeometry x="592" y="46" width="558" height="70" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

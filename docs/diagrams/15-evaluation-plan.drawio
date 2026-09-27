@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="drawio" version="26.0.0">
+  <diagram name="evaluation-plan">
+    <mxGraphModel background="#0a0f1c">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Evaluation plan — what each experiment has to prove" style="text;html=1;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=17;fontColor=#dbe4f0;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="28" width="1320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="E1 — Main finding · the case study (K=1)" style="swimlane;startSize=44;html=1;fillColor=#0a0f1c;strokeColor=#a78bfa;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=14;fontStyle=1;align=left;spacingLeft=16;pointerEvents=0;rounded=1;arcSize=4;" vertex="1" parent="1">
+          <mxGeometry x="40" y="100" width="640" height="610" as="geometry" />
+        </mxCell>
+        <mxCell id="e1tag" value="load-bearing" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#33240a;strokeColor=#e8b339;fontColor=#e8b339;fontFamily=Courier New;fontSize=11;fontStyle=1;" vertex="1" parent="e1">
+          <mxGeometry x="470" y="8" width="150" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="e1runs" value="&lt;div style=&quot;line-height:170%;&quot;&gt;&lt;span style=&quot;color:#9fb0c3;letter-spacing:1px;&quot;&gt;RUNS&lt;/span&gt;&lt;br&gt;~100–150 prompts — authored scam + medical sets&lt;br&gt;scaled up · MultiJail backbone kept&lt;br&gt;benign over-refusal controls kept&lt;br&gt;EN + VN pairs · per-prompt provenance&lt;br&gt;6–10 models — qwen2.5 (0.5b, 3b) · phogpt-4b ·&lt;br&gt;seallm-v3-7b · vistral · gemma-2/3 · llama-3.x&lt;br&gt;3 seeds · mean ± CI · bootstrapped EN↔VN gap&lt;br&gt;judge validated against human labels on a&lt;br&gt;~100-response subset · Cohen's κ reported&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a2233;strokeColor=#8b98ab;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=13;align=left;verticalAlign=top;spacingLeft=14;spacingRight=14;spacingTop=10;spacingBottom=10;" vertex="1" parent="e1">
+          <mxGeometry x="20" y="56" width="600" height="248" as="geometry" />
+        </mxCell>
+        <mxCell id="e1fix" value="&lt;div style=&quot;line-height:170%;&quot;&gt;&lt;span style=&quot;color:#d7b357;letter-spacing:1px;&quot;&gt;VALIDITY FIXES (MANDATORY)&lt;/span&gt;&lt;br&gt;per-model template correctness in the EN arm&lt;br&gt;rubric separates coherent refusal from&lt;br&gt;degenerate output&lt;br&gt;pinned judge snapshot · matched quantization&lt;br&gt;detect_language() recorded in the Scorecard&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2e250f;strokeColor=#d7b357;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=13;align=left;verticalAlign=top;spacingLeft=14;spacingRight=14;spacingTop=10;spacingBottom=10;" vertex="1" parent="e1">
+          <mxGeometry x="20" y="320" width="600" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="e1del" value="&lt;div style=&quot;line-height:170%;&quot;&gt;&lt;span style=&quot;color:#a78bfa;letter-spacing:1px;&quot;&gt;&lt;b&gt;DELIVERABLE&lt;/b&gt;&lt;/span&gt;&lt;br&gt;the citable table the hackathon's&lt;br&gt;47-prompt run only gestured at&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#221a33;strokeColor=#a78bfa;strokeWidth=2;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=13;align=left;verticalAlign=middle;spacingLeft=14;spacingRight=14;" vertex="1" parent="e1">
+          <mxGeometry x="20" y="496" width="600" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="E2 — Two-sided showcases (K=2–3 · M=1–2)" style="swimlane;startSize=44;html=1;fillColor=#0a0f1c;strokeColor=#2dd4bf;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=14;fontStyle=1;align=left;spacingLeft=16;pointerEvents=0;rounded=1;arcSize=4;" vertex="1" parent="1">
+          <mxGeometry x="720" y="100" width="640" height="610" as="geometry" />
+        </mxCell>
+        <mxCell id="e2tag" value="additive" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#1a2233;strokeColor=#8b98ab;fontColor=#9fb0c3;fontFamily=Courier New;fontSize=11;fontStyle=1;" vertex="1" parent="e2">
+          <mxGeometry x="470" y="8" width="150" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="e2runs" value="&lt;div style=&quot;line-height:170%;&quot;&gt;&lt;span style=&quot;color:#9fb0c3;letter-spacing:1px;&quot;&gt;RUNS&lt;/span&gt;&lt;br&gt;1–2 audits · 2–3 benchmark owners stake private&lt;br&gt;prompt sets; 2 labs stake private models&lt;br&gt;up to 6 parties — 3 set owners, 2 labs, the auditor&lt;br&gt;three passes: Model 1, Model 2, Fusion([1, 2])&lt;br&gt;over the same sets, seeds and temperature&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a2233;strokeColor=#8b98ab;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=13;align=left;verticalAlign=top;spacingLeft=14;spacingRight=14;spacingTop=10;spacingBottom=10;" vertex="1" parent="e2">
+          <mxGeometry x="20" y="56" width="600" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="e2score" value="&lt;div style=&quot;line-height:170%;&quot;&gt;&lt;span style=&quot;color:#2dd4bf;letter-spacing:1px;&quot;&gt;WHAT THE SCORECARD CARRIES&lt;/span&gt;&lt;br&gt;a candidates × sets grid + lift[j] per lab&lt;br&gt;per-set scores sealed to their owners&lt;br&gt;labs see only their own model, the Fusion, lift[j]&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0c2530;strokeColor=#2dd4bf;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=13;align=left;verticalAlign=top;spacingLeft=14;spacingRight=14;spacingTop=10;spacingBottom=10;" vertex="1" parent="e2">
+          <mxGeometry x="20" y="252" width="600" height="136" as="geometry" />
+        </mxCell>
+        <mxCell id="e2note" value="&lt;div style=&quot;line-height:170%;&quot;&gt;one new mechanism —&lt;br&gt;the candidate loop&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0a0f1c;strokeColor=#8b98ab;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=13;align=left;verticalAlign=middle;spacingLeft=14;spacingRight=14;spacingTop=10;spacingBottom=10;dashed=1;" vertex="1" parent="e2">
+          <mxGeometry x="20" y="404" width="600" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="e2del" value="&lt;div style=&quot;line-height:170%;&quot;&gt;&lt;span style=&quot;color:#2dd4bf;letter-spacing:1px;&quot;&gt;&lt;b&gt;DELIVERABLE&lt;/b&gt;&lt;/span&gt;&lt;br&gt;N-party blind audits, sealed per owner,&lt;br&gt;answering: does the fusion beat each model?&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0c2530;strokeColor=#2dd4bf;strokeWidth=2;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=13;align=left;verticalAlign=middle;spacingLeft=14;spacingRight=14;" vertex="1" parent="e2">
+          <mxGeometry x="20" y="496" width="600" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="E3 — Systems evaluation" style="swimlane;startSize=44;html=1;fillColor=#0a0f1c;strokeColor=#34d399;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=14;fontStyle=1;align=left;spacingLeft=16;pointerEvents=0;rounded=1;arcSize=4;" vertex="1" parent="1">
+          <mxGeometry x="40" y="750" width="640" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="e3tag" value="load-bearing" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#33240a;strokeColor=#e8b339;fontColor=#e8b339;fontFamily=Courier New;fontSize=11;fontStyle=1;" vertex="1" parent="e3">
+          <mxGeometry x="470" y="8" width="150" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="e3runs" value="&lt;div style=&quot;line-height:170%;&quot;&gt;&lt;span style=&quot;color:#9fb0c3;letter-spacing:1px;&quot;&gt;RUNS&lt;/span&gt;&lt;br&gt;TEE overhead — the same audit native vs&lt;br&gt;confidential VM: tokens/s · end-to-end&lt;br&gt;wall-clock · enclave boot + attestation latency&lt;br&gt;backend portability — CPU, H100 confidential&lt;br&gt;GPU, Apple Metal: same code, three chips&lt;br&gt;one full-suite attested Confidential Space run&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a2233;strokeColor=#8b98ab;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=13;align=left;verticalAlign=middle;spacingLeft=14;spacingRight=14;spacingTop=10;spacingBottom=10;" vertex="1" parent="e3">
+          <mxGeometry x="20" y="56" width="600" height="218" as="geometry" />
+        </mxCell>
+        <mxCell id="e3del" value="&lt;div style=&quot;line-height:170%;&quot;&gt;&lt;span style=&quot;color:#34d399;letter-spacing:1px;&quot;&gt;&lt;b&gt;DELIVERABLE&lt;/b&gt;&lt;/span&gt;&lt;br&gt;the “is this practical?” section&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0a2b1e;strokeColor=#34d399;strokeWidth=2;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=13;align=left;verticalAlign=middle;spacingLeft=14;spacingRight=14;" vertex="1" parent="e3">
+          <mxGeometry x="20" y="290" width="600" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="E4 — Verification &amp; failure drills" style="swimlane;startSize=44;html=1;fillColor=#0a0f1c;strokeColor=#d7b357;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=14;fontStyle=1;align=left;spacingLeft=16;pointerEvents=0;rounded=1;arcSize=4;" vertex="1" parent="1">
+          <mxGeometry x="720" y="750" width="640" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="e4tag" value="load-bearing" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#33240a;strokeColor=#e8b339;fontColor=#e8b339;fontFamily=Courier New;fontSize=11;fontStyle=1;" vertex="1" parent="e4">
+          <mxGeometry x="470" y="8" width="150" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="e4intro" value="&lt;div style=&quot;line-height:170%;&quot;&gt;&lt;span style=&quot;color:#9fb0c3;letter-spacing:1px;&quot;&gt;RUNS&lt;/span&gt;&amp;nbsp;&amp;nbsp;crucible verify against four cases&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=13;fontColor=#dbe4f0;" vertex="1" parent="e4">
+          <mxGeometry x="20" y="56" width="600" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="e4d0" value="&lt;div&gt;a good run&amp;nbsp;&amp;nbsp;&lt;span style=&quot;color:#34d399;&quot;&gt;→ verify PASSES&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0a2b1e;strokeColor=#34d399;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;align=left;verticalAlign=middle;spacingLeft=14;" vertex="1" parent="e4">
+          <mxGeometry x="20" y="92" width="600" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="e4d1" value="&lt;div&gt;a tampered scorecard&amp;nbsp;&amp;nbsp;&lt;span style=&quot;color:#e8b339;&quot;&gt;→ verify REJECTS&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#33240a;strokeColor=#e8b339;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;align=left;verticalAlign=middle;spacingLeft=14;" vertex="1" parent="e4">
+          <mxGeometry x="20" y="140" width="600" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="e4d2" value="&lt;div&gt;a wrong-image enclave&amp;nbsp;&amp;nbsp;&lt;span style=&quot;color:#e8b339;&quot;&gt;→ verify REJECTS&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#33240a;strokeColor=#e8b339;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;align=left;verticalAlign=middle;spacingLeft=14;" vertex="1" parent="e4">
+          <mxGeometry x="20" y="188" width="600" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="e4d3" value="&lt;div&gt;a vetoed job&amp;nbsp;&amp;nbsp;&lt;span style=&quot;color:#e8b339;&quot;&gt;→ verify REJECTS — never ran&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#33240a;strokeColor=#e8b339;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;align=left;verticalAlign=middle;spacingLeft=14;" vertex="1" parent="e4">
+          <mxGeometry x="20" y="236" width="600" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="e4del" value="&lt;div style=&quot;line-height:170%;&quot;&gt;&lt;span style=&quot;color:#d7b357;letter-spacing:1px;&quot;&gt;&lt;b&gt;DELIVERABLE&lt;/b&gt;&lt;/span&gt;&lt;br&gt;security claims demonstrated, not asserted&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2e250f;strokeColor=#d7b357;strokeWidth=2;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=13;align=left;verticalAlign=middle;spacingLeft=14;spacingRight=14;" vertex="1" parent="e4">
+          <mxGeometry x="20" y="290" width="600" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="fcap" value="WHICH BUILD PRIORITY EACH LANDS IN" style="text;html=1;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=12;fontColor=#9fb0c3;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1178" width="1320" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="fc0" value="E1 → P2 / P3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#221a33;strokeColor=#a78bfa;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=13;fontStyle=1;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1212" width="300" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="fc1" value="E2 → P4" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a2233;strokeColor=#8b98ab;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=13;fontStyle=1;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="380" y="1212" width="300" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="fc2" value="E3 → P3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0a2b1e;strokeColor=#34d399;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=13;fontStyle=1;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="720" y="1212" width="300" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="fc3" value="E4 → P1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2e250f;strokeColor=#d7b357;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=13;fontStyle=1;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="1212" width="300" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="fnote" value="three load-bearing, one additive — the paper survives without E2" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#0a0f1c;strokeColor=#8b98ab;fontColor=#9fb0c3;fontFamily=Courier New;fontSize=12;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1292" width="1320" height="52" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

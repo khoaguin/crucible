@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="drawio" version="26.0.0">
+  <diagram name="build-order-ladder">
+    <mxGraphModel background="#0a0f1c">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="&lt;b&gt;Build order — two tracks through P0, then one ladder&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;color:#7c8899&quot;&gt;priority, not calendar — Track A is the contribution, Track B the plumbing; they meet only at P0 exit&lt;/span&gt;" style="text;html=1;fillColor=none;strokeColor=none;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=17;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="20" y="16" width="1220" height="56" as="geometry" />
+        </mxCell>
+
+        <mxCell id="h0" value="risk&lt;br&gt;retired" style="text;html=1;fillColor=none;strokeColor=none;fontColor=#7c8899;fontFamily=Courier New;fontSize=10;fontStyle=1;align=left;verticalAlign=bottom;" vertex="1" parent="1">
+          <mxGeometry x="24" y="86" width="76" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hA" value="PRIORITY · MILESTONE" style="text;html=1;fillColor=none;strokeColor=none;fontColor=#7c8899;fontFamily=Courier New;fontSize=11;fontStyle=1;align=left;verticalAlign=bottom;" vertex="1" parent="1">
+          <mxGeometry x="112" y="86" width="280" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hB" value="WHY THIS ORDER — the risk being retired" style="text;html=1;fillColor=none;strokeColor=none;fontColor=#7c8899;fontFamily=Courier New;fontSize=11;fontStyle=1;align=left;verticalAlign=bottom;" vertex="1" parent="1">
+          <mxGeometry x="404" y="86" width="410" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hC" value="VERIFY — the exit criterion" style="text;html=1;fillColor=none;strokeColor=none;fontColor=#34d399;fontFamily=Courier New;fontSize=11;fontStyle=1;align=left;verticalAlign=bottom;" vertex="1" parent="1">
+          <mxGeometry x="826" y="86" width="402" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="spine" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#4a5568;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="24" y="124" as="sourcePoint" />
+            <mxPoint x="24" y="1364" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="g0" value="&lt;b&gt;HIGH&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3a1414;strokeColor=#f87171;fontColor=#fca5a5;fontFamily=Courier New;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="36" y="124" width="52" height="556" as="geometry" />
+        </mxCell>
+        <mxCell id="g1" value="&lt;b&gt;HIGH&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3a1414;strokeColor=#f87171;fontColor=#fca5a5;fontFamily=Courier New;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="36" y="698" width="52" height="124" as="geometry" />
+        </mxCell>
+        <mxCell id="g2" value="LOW" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2e250f;strokeColor=#d7b357;fontColor=#d7b357;fontFamily=Courier New;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="36" y="840" width="52" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="g3" value="LOW" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2e250f;strokeColor=#d7b357;fontColor=#d7b357;fontFamily=Courier New;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="36" y="968" width="52" height="124" as="geometry" />
+        </mxCell>
+        <mxCell id="g4" value="NONE" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#131a26;strokeColor=#4a5568;fontColor=#6b7688;fontFamily=Courier New;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="36" y="1110" width="52" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="g5" value="NONE" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#131a26;strokeColor=#4a5568;fontColor=#6b7688;fontFamily=Courier New;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="36" y="1246" width="52" height="118" as="geometry" />
+        </mxCell>
+
+        <mxCell id="b0" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#101826;strokeColor=#2dd4bf;strokeWidth=2;fontColor=#dbe4f0;fontFamily=Courier New;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="100" y="124" width="1140" height="556" as="geometry" />
+        </mxCell>
+        <mxCell id="b0a" value="&lt;b&gt;P0 — foundation&lt;/b&gt;&lt;br&gt;&lt;br&gt;two tracks, one meeting point&lt;br&gt;&lt;br&gt;&lt;span style=&quot;color:#9fb0c3&quot;&gt;everything on one laptop,&lt;br&gt;no cloud, no CVM&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0c2530;strokeColor=#2dd4bf;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;" vertex="1" parent="b0">
+          <mxGeometry x="12" y="12" width="280" height="132" as="geometry" />
+        </mxCell>
+        <mxCell id="b0b" value="Serially, the story was validated LAST —&lt;br&gt;the riskiest narrative assumption held&lt;br&gt;hostage by the part reviewers already&lt;br&gt;assume works.&lt;br&gt;&lt;br&gt;Split, each track retires its own risk, and&lt;br&gt;neither can silently break the other." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a2233;strokeColor=#8b98ab;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;" vertex="1" parent="b0">
+          <mxGeometry x="304" y="12" width="410" height="132" as="geometry" />
+        </mxCell>
+        <mxCell id="b0c" value="✓ notebook runs top-to-bottom green on a&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;laptop (Metal)&lt;br&gt;✓ leak test, per owner — zero prompt text&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;to the model owner, zero cross-set text&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;between benchmark owners&lt;br&gt;✓ crucible verify passes on a real scorecard,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;fails on a tampered one" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0a2b1e;strokeColor=#34d399;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;" vertex="1" parent="b0">
+          <mxGeometry x="726" y="12" width="402" height="132" as="geometry" />
+        </mxCell>
+
+        <mxCell id="tracks" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#0e1622;strokeColor=#2dd4bf;fontColor=#9fb0c3;fontFamily=Courier New;fontSize=11;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;pointerEvents=0;" vertex="1" parent="b0">
+          <mxGeometry x="6" y="160" width="1128" height="384" as="geometry" />
+        </mxCell>
+
+        <mxCell id="nb" value="&lt;b&gt;📓 the red&lt;br&gt;notebook&lt;/b&gt;&lt;br&gt;&lt;br&gt;the acceptance&lt;br&gt;test, written&lt;br&gt;first — both&lt;br&gt;tracks exist to&lt;br&gt;turn its cells&lt;br&gt;green" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#221a33;strokeColor=#a78bfa;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=10;verticalAlign=top;spacingTop=8;" vertex="1" parent="tracks">
+          <mxGeometry x="10" y="126" width="132" height="132" as="geometry" />
+        </mxCell>
+        <mxCell id="seam" value="&lt;b&gt;🔌 Execution&lt;br&gt;Backend&lt;/b&gt;&lt;br&gt;&lt;br&gt;the ONE shared&lt;br&gt;protocol (§7)&lt;br&gt;&lt;br&gt;A runs on a stub&lt;br&gt;of it from day&lt;br&gt;one" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#33240a;strokeColor=#e8b339;strokeWidth=2;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=10;verticalAlign=top;spacingTop=8;" vertex="1" parent="tracks">
+          <mxGeometry x="158" y="126" width="126" height="132" as="geometry" />
+        </mxCell>
+        <mxCell id="nbseam" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=classic;endFill=1;strokeColor=#8b98ab;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="tracks" source="nb" target="seam">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="laneA" value="TRACK A — trust / protocol&amp;nbsp;&amp;nbsp;·&amp;nbsp;&amp;nbsp;syft only&amp;nbsp;&amp;nbsp;·&amp;nbsp;&amp;nbsp;the paper&#39;s contribution" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#0c1c22;strokeColor=#2dd4bf;fontColor=#2dd4bf;fontFamily=Courier New;fontSize=11;fontStyle=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=5;pointerEvents=0;" vertex="1" parent="tracks">
+          <mxGeometry x="300" y="8" width="662" height="176" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" value="&lt;b&gt;A1&lt;/b&gt;&lt;br&gt;BenchmarkSpec&lt;br&gt;+ CaseSets&lt;br&gt;&lt;br&gt;&lt;span style=&quot;color:#9fb0c3&quot;&gt;K=2 native —&lt;br&gt;47 prompts split&lt;br&gt;into two owner&lt;br&gt;sets&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0c2530;strokeColor=#2dd4bf;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=10;verticalAlign=top;spacingTop=6;" vertex="1" parent="laneA">
+          <mxGeometry x="10" y="28" width="146" height="138" as="geometry" />
+        </mxCell>
+        <mxCell id="a2" value="&lt;b&gt;A2&lt;/b&gt;&lt;br&gt;mock→private&lt;br&gt;split&lt;br&gt;&lt;br&gt;&lt;span style=&quot;color:#9fb0c3&quot;&gt;approval + veto&lt;br&gt;over 4 datasites&lt;br&gt;(in-mem PySyft)&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0c2530;strokeColor=#2dd4bf;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=10;verticalAlign=top;spacingTop=6;" vertex="1" parent="laneA">
+          <mxGeometry x="172" y="28" width="146" height="138" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" value="&lt;b&gt;A3&lt;/b&gt;&lt;br&gt;Scorecard&lt;br&gt;schema&lt;br&gt;&lt;br&gt;&lt;span style=&quot;color:#9fb0c3&quot;&gt;per_set sealed&lt;br&gt;+ combined&lt;br&gt;real Ed25519&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0c2530;strokeColor=#2dd4bf;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=10;verticalAlign=top;spacingTop=6;" vertex="1" parent="laneA">
+          <mxGeometry x="334" y="28" width="146" height="138" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" value="&lt;b&gt;A4&lt;/b&gt;&lt;br&gt;crucible verify&lt;br&gt;&lt;br&gt;&lt;span style=&quot;color:#9fb0c3&quot;&gt;attestation behind&lt;br&gt;a loudly-labeled&lt;br&gt;MockAttestation&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0c2530;strokeColor=#2dd4bf;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=10;verticalAlign=top;spacingTop=6;" vertex="1" parent="laneA">
+          <mxGeometry x="496" y="28" width="146" height="138" as="geometry" />
+        </mxCell>
+        <mxCell id="ae1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=classic;endFill=1;strokeColor=#8b98ab;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="laneA" source="a1" target="a2"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ae2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=classic;endFill=1;strokeColor=#8b98ab;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="laneA" source="a2" target="a3"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ae3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=classic;endFill=1;strokeColor=#8b98ab;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="laneA" source="a3" target="a4"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="laneB" value="TRACK B — execution&amp;nbsp;&amp;nbsp;·&amp;nbsp;&amp;nbsp;url4 / SF only&amp;nbsp;&amp;nbsp;·&amp;nbsp;&amp;nbsp;the plumbing a reviewer assumes works" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#151b26;strokeColor=#8b98ab;fontColor=#8b98ab;fontFamily=Courier New;fontSize=11;fontStyle=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=5;pointerEvents=0;" vertex="1" parent="tracks">
+          <mxGeometry x="300" y="196" width="662" height="176" as="geometry" />
+        </mxCell>
+        <mxCell id="c1" value="&lt;b&gt;B1&lt;/b&gt;&lt;br&gt;chat()&lt;br&gt;+ ModelEndpoint&lt;br&gt;&lt;br&gt;&lt;span style=&quot;color:#9fb0c3&quot;&gt;OpenAI wire shape&lt;br&gt;only — mock&lt;br&gt;default, mlx&lt;br&gt;opt-in&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a2233;strokeColor=#8b98ab;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=10;verticalAlign=top;spacingTop=6;" vertex="1" parent="laneB">
+          <mxGeometry x="10" y="28" width="146" height="138" as="geometry" />
+        </mxCell>
+        <mxCell id="c2" value="&lt;b&gt;B2&lt;/b&gt;&lt;br&gt;EnsembleSpec&lt;br&gt;+ spec_hash()&lt;br&gt;&lt;br&gt;&lt;span style=&quot;color:#9fb0c3&quot;&gt;NaiveBackend —&lt;br&gt;the oracle every&lt;br&gt;backend is&lt;br&gt;measured against&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a2233;strokeColor=#8b98ab;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=10;verticalAlign=top;spacingTop=6;" vertex="1" parent="laneB">
+          <mxGeometry x="172" y="28" width="146" height="138" as="geometry" />
+        </mxCell>
+        <mxCell id="c3" value="&lt;b&gt;B3&lt;/b&gt;&lt;br&gt;emitter.py&lt;br&gt;&lt;br&gt;&lt;span style=&quot;color:#9fb0c3&quot;&gt;lowers Benchmark-&lt;br&gt;Spec → url4&lt;br&gt;[data]/[commands]&lt;br&gt;&lt;br&gt;B4 is its only&lt;br&gt;consumer&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a2233;strokeColor=#8b98ab;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=10;verticalAlign=top;spacingTop=6;" vertex="1" parent="laneB">
+          <mxGeometry x="334" y="28" width="146" height="138" as="geometry" />
+        </mxCell>
+        <mxCell id="c4" value="&lt;b&gt;B4&lt;/b&gt;&lt;br&gt;Url4Backend&lt;br&gt;(in-process)&lt;br&gt;&lt;br&gt;&lt;span style=&quot;color:#9fb0c3&quot;&gt;equivalence vs&lt;br&gt;NaiveBackend&lt;br&gt;StaticIOLayer denial&lt;br&gt;&lt;br&gt;⚠ drift risk&lt;br&gt;lives here&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#33240a;strokeColor=#e8b339;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=10;verticalAlign=top;spacingTop=6;" vertex="1" parent="laneB">
+          <mxGeometry x="496" y="28" width="146" height="138" as="geometry" />
+        </mxCell>
+        <mxCell id="ce1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=classic;endFill=1;strokeColor=#8b98ab;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="laneB" source="c1" target="c2"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ce2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=classic;endFill=1;strokeColor=#8b98ab;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="laneB" source="c2" target="c3"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ce3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=classic;endFill=1;strokeColor=#8b98ab;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="laneB" source="c3" target="c4"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="seamA" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=classic;endFill=1;strokeColor=#e8b339;exitX=1;exitY=0.25;entryX=0;entryY=0.5;" edge="1" parent="tracks" source="seam" target="laneA">
+          <mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="seamB" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=classic;endFill=1;strokeColor=#e8b339;exitX=1;exitY=0.75;entryX=0;entryY=0.5;" edge="1" parent="tracks" source="seam" target="laneB">
+          <mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="exit" value="&lt;b&gt;✅ P0 exit&lt;/b&gt;&lt;br&gt;&lt;br&gt;notebook green&lt;br&gt;&lt;br&gt;&lt;span style=&quot;color:#9fb0c3&quot;&gt;veto demo&lt;br&gt;what left the&lt;br&gt;enclave&lt;br&gt;tamper-fail cell&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0a2b1e;strokeColor=#34d399;strokeWidth=2;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=10;verticalAlign=top;spacingTop=8;" vertex="1" parent="tracks">
+          <mxGeometry x="978" y="126" width="140" height="132" as="geometry" />
+        </mxCell>
+        <mxCell id="exA" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=classic;endFill=1;strokeColor=#34d399;exitX=1;exitY=0.5;entryX=0;entryY=0.25;" edge="1" parent="tracks" source="laneA" target="exit">
+          <mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="exB" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=classic;endFill=1;strokeColor=#34d399;exitX=1;exitY=0.5;entryX=0;entryY=0.75;" edge="1" parent="tracks" source="laneB" target="exit">
+          <mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="b1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#101826;strokeColor=#34d399;strokeWidth=2;fontColor=#dbe4f0;fontFamily=Courier New;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="100" y="698" width="1140" height="124" as="geometry" />
+        </mxCell>
+        <mxCell id="b1a" value="&lt;b&gt;P1 — kill the&lt;br&gt;biggest bet&lt;/b&gt;&lt;br&gt;&lt;br&gt;stack running in-enclave on&lt;br&gt;Confidential Space&lt;br&gt;crucible verify v1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0a2b1e;strokeColor=#34d399;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;" vertex="1" parent="b1">
+          <mxGeometry x="12" y="12" width="280" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="b1b" value="&quot;The whole stack runs attested in a CVM&quot;&lt;br&gt;is the riskiest claim in the paper.&lt;br&gt;&lt;br&gt;Prove it on the skeleton before investing&lt;br&gt;in content." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a2233;strokeColor=#8b98ab;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;" vertex="1" parent="b1">
+          <mxGeometry x="304" y="12" width="410" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="b1c" value="✓ one real attested run&lt;br&gt;✓ crucible verify passes — and fails —&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;correctly" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0a2b1e;strokeColor=#34d399;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;" vertex="1" parent="b1">
+          <mxGeometry x="726" y="12" width="402" height="100" as="geometry" />
+        </mxCell>
+
+        <mxCell id="b2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#141b28;strokeColor=#8b98ab;fontColor=#dbe4f0;fontFamily=Courier New;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="100" y="840" width="1140" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="b2a" value="&lt;b&gt;P2 — real content&lt;/b&gt;&lt;br&gt;&lt;br&gt;real seam plugins&lt;br&gt;model-server autodetect&lt;br&gt;benchmark scaled to ~150 prompts" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#221a33;strokeColor=#a78bfa;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;" vertex="1" parent="b2">
+          <mxGeometry x="12" y="12" width="280" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="b2b" value="Low-risk work.&lt;br&gt;&lt;br&gt;Pointless if P1 fails, and straightforward&lt;br&gt;once P1 holds." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a2233;strokeColor=#8b98ab;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;" vertex="1" parent="b2">
+          <mxGeometry x="304" y="12" width="410" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="b2c" value="✓ E1 runs locally · 1 seed · real grader" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0a2b1e;strokeColor=#34d399;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;" vertex="1" parent="b2">
+          <mxGeometry x="726" y="12" width="402" height="86" as="geometry" />
+        </mxCell>
+
+        <mxCell id="b3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#141b28;strokeColor=#8b98ab;fontColor=#dbe4f0;fontFamily=Courier New;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="100" y="968" width="1140" height="124" as="geometry" />
+        </mxCell>
+        <mxCell id="b3a" value="&lt;b&gt;P3 — the numbers&lt;/b&gt;&lt;br&gt;&lt;br&gt;full E1 (all models × 3 seeds)&lt;br&gt;on the CVM&lt;br&gt;judge validation (Cohen's κ)&lt;br&gt;E3 measurements" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#221a33;strokeColor=#a78bfa;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;" vertex="1" parent="b3">
+          <mxGeometry x="12" y="12" width="280" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="b3b" value="Needs P1's enclave and P2's content.&lt;br&gt;&lt;br&gt;Both must already hold — running the full&lt;br&gt;grid before then just burns compute on a&lt;br&gt;stack that may still move." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a2233;strokeColor=#8b98ab;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;" vertex="1" parent="b3">
+          <mxGeometry x="304" y="12" width="410" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="b3c" value="✓ tables and confidence intervals done" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0a2b1e;strokeColor=#34d399;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;" vertex="1" parent="b3">
+          <mxGeometry x="726" y="12" width="402" height="100" as="geometry" />
+        </mxCell>
+
+        <mxCell id="b4" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#0f141f;strokeColor=#4a5568;fontColor=#dbe4f0;fontFamily=Courier New;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1110" width="1140" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="b4opt" value="OPTIONAL" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#131a26;strokeColor=#4a5568;fontColor=#8b98ab;fontFamily=Courier New;fontSize=10;fontStyle=1;" vertex="1" parent="b4">
+          <mxGeometry x="1008" y="-11" width="118" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="b4a" value="&lt;b&gt;P4 — the showcases&lt;/b&gt;&lt;br&gt;&lt;br&gt;notebook B (AuditJob facade)&lt;br&gt;two-sided E2 + synthesize&lt;br&gt;H100 confidential-GPU demo run" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#151d2b;strokeColor=#6b7688;fontColor=#9fb0c3;fontFamily=Courier New;fontSize=12;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;" vertex="1" parent="b4">
+          <mxGeometry x="12" y="16" width="280" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="b4b" value="Additive, not load-bearing.&lt;br&gt;&lt;br&gt;The paper survives without either one —&lt;br&gt;so neither may block anything above." style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#151d2b;strokeColor=#6b7688;fontColor=#9fb0c3;fontFamily=Courier New;fontSize=12;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;" vertex="1" parent="b4">
+          <mxGeometry x="304" y="16" width="410" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="b4c" value="✓ 1–2 two-sided audits complete,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;at least one with 6 parties (K=3, M=2)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0a2b1e;strokeColor=#34d399;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;" vertex="1" parent="b4">
+          <mxGeometry x="726" y="16" width="402" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="b5" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#141b28;strokeColor=#8b98ab;fontColor=#dbe4f0;fontFamily=Courier New;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1246" width="1140" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="b5a" value="&lt;b&gt;P5 — the paper&lt;/b&gt;&lt;br&gt;&lt;br&gt;writing&lt;br&gt;threat-model section&lt;br&gt;internal review" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2e250f;strokeColor=#d7b357;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;" vertex="1" parent="b5">
+          <mxGeometry x="12" y="12" width="280" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="b5b" value="Last only as a &lt;i&gt;finish&lt;/i&gt;.&lt;br&gt;&lt;br&gt;The threat-model notes accrete from P1&lt;br&gt;onward — they are not written here." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a2233;strokeColor=#8b98ab;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;" vertex="1" parent="b5">
+          <mxGeometry x="304" y="12" width="410" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="b5c" value="✓ draft → co-author review → submit to the&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;nearest top-tier cycle" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0a2b1e;strokeColor=#34d399;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;" vertex="1" parent="b5">
+          <mxGeometry x="726" y="12" width="402" height="94" as="geometry" />
+        </mxCell>
+
+        <mxCell id="note" value="Ordering principle: retire the riskiest assumption first. P0 splits because its two risks are independent — can the trust protocol be stated and verified, and does the engine execute what we claim? P1 then carries the one real systems risk: does the whole stack run attested? Everything below is content, measurement and polish. No rung here is a date — a rung is done when its Verify column is true.&#xa;&#xa;Not rungs, deliberately: the related-work sweep (KHO-6) and the GCP quota request (KHO-5) run alongside and block nothing — on the ladder they only made it lie about its own critical path." style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#0a0f1c;strokeColor=#8b98ab;fontColor=#9fb0c3;fontFamily=Courier New;fontSize=11;align=left;verticalAlign=top;spacingLeft=12;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1390" width="1140" height="112" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

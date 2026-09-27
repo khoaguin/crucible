@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="drawio" version="26.0.0">
+  <diagram name="blindfold-to-crucible">
+    <mxGraphModel background="#0a0f1c">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="Blindfold → Crucible — every hole has a control (one still waits on upstream), every confound has a fix" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=17;fontColor=#dbe4f0;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="18" width="1200" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="b1" value="WHAT BLINDFOLD REALLY SHIPPED — the real assets Crucible inherits" style="swimlane;startSize=30;fillColor=#141b29;strokeColor=#8b98ab;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=13;fontStyle=1;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="70" width="1200" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="b1a" value="Three-party blind-audit harness on OpenMined&#39;s&#xa;syft-client compute-to-data flow, in two configs:&#xa;in-memory notebook demo + GCP Confidential Space&#xa;(AMD SEV, no operator login) with hardware&#xa;attestation · Google Drive as untrusted,&#xa;E2E-encrypted transport" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a2233;strokeColor=#8b98ab;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=11;verticalAlign=top;spacingTop=4;" vertex="1" parent="b1">
+          <mxGeometry x="20" y="42" width="380" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="b1b" value="A 47-prompt bilingual EN↔VN benchmark:&#xa;   scam 8 · medical 8&#xa;   jailbreak 26 (MultiJail)&#xa;   benign over-refusal controls 5&#xa;Every harmful prompt cites a real&#xa;Vietnamese source." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a2233;strokeColor=#8b98ab;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=11;verticalAlign=top;spacingTop=4;" vertex="1" parent="b1">
+          <mxGeometry x="410" y="42" width="380" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="b1c" value="The finding, across 4 Vietnamese-capable models:&#xa;phogpt-4b — the Vietnamese-SPECIALIZED model —&#xa;is the LEAST safe in Vietnamese: it refuses&#xa;14% of harmful VN prompts vs 38% in EN,&#xa;the worst gap of the four." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a2233;strokeColor=#9fb0c3;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=11;verticalAlign=top;spacingTop=4;" vertex="1" parent="b1">
+          <mxGeometry x="800" y="42" width="380" height="112" as="geometry" />
+        </mxCell>
+
+        <mxCell id="h2l" value="THE HOLE AS SHIPPED" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2e1414;strokeColor=#f87171;fontColor=#f87171;fontFamily=Courier New;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="262" width="540" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="h2r" value="CRUCIBLE&#39;S CONTROL" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0c2530;strokeColor=#2dd4bf;fontColor=#2dd4bf;fontFamily=Courier New;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="262" width="540" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r1l" value="The GCP config isn&#39;t in the repo — all Confidential Space&#xa;plumbing lives upstream in the pinned syft-client, and&#xa;verify_attestation exists nowhere" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2e1414;strokeColor=#e06c75;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="300" width="540" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="r1r" value="Two deployments from ONE set of bytes; only&#xa;AttestationProvider + the SealedAssetRef resolver swap.&#xa;V1 prints a loud MOCKED banner rather than pretending" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0c2530;strokeColor=#2dd4bf;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="700" y="300" width="540" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="r1e" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=classic;endFill=1;strokeWidth=2;strokeColor=#2dd4bf;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="r1l" target="r1r">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r2l" value="The lab DOES see the prompts — the job writes every&#xa;prompt into results.json, and share_results_with_do=True&#xa;delivers it" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2e1414;strokeColor=#e06c75;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="390" width="540" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="r2r" value="A fixed-schema, length-bounded Scorecard is the ONLY&#xa;channel out of the enclave" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0c2530;strokeColor=#2dd4bf;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="700" y="390" width="540" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="r2e" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=classic;endFill=1;strokeWidth=2;strokeColor=#2dd4bf;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="r2l" target="r2r">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r3l" value="Output is arbitrary unsigned bytes" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2e1414;strokeColor=#e06c75;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="480" width="540" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="r3r" value="Ed25519-signed fixed schema — signatures are NEVER&#xa;mocked, in any deployment" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0c2530;strokeColor=#2dd4bf;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="700" y="480" width="540" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="r3e" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=classic;endFill=1;strokeWidth=2;strokeColor=#2dd4bf;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="r3l" target="r3r">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r4l" value="Approval is eyeballing, and the approver set&#xa;≠ the data-owner set" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2e1414;strokeColor=#e06c75;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="570" width="540" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="r4r" value="Unanimous per-owner approval over the eval code;&#xa;any owner can veto — and the veto path is a tested&#xa;exit criterion" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0c2530;strokeColor=#2dd4bf;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="700" y="570" width="540" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="r4e" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=classic;endFill=1;strokeWidth=2;strokeColor=#2dd4bf;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="r4l" target="r4r">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r5l" value="The judge runs off-enclave, via an unpinned API model" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2e1414;strokeColor=#e06c75;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="660" width="540" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="r5r" value="In-enclave judge behind a /judge route, pinned snapshot,&#xa;validated against human labels with Cohen&#39;s κ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0c2530;strokeColor=#2dd4bf;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="700" y="660" width="540" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="r5e" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=classic;endFill=1;strokeWidth=2;strokeColor=#2dd4bf;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="r5l" target="r5r">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r6l" value="Dependencies pip-install at run time, inside the&#xa;&quot;isolated&quot; enclave" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2e1414;strokeColor=#e06c75;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="750" width="540" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="r6r" value="Crucible requires a split install and a seccomp&#xa;sandbox denying socket creation — both on an&#xa;unmerged PySyft branch, so still open" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#33240a;strokeColor=#e8b339;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="700" y="750" width="540" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="r6e" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=classic;endFill=1;strokeWidth=2;strokeColor=#e8b339;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="r6l" target="r6r">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="h3l" value="CONFOUND IN THE FINDING — a measurement problem, not a security one" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#221a33;strokeColor=#a78bfa;fontColor=#a78bfa;fontFamily=Courier New;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="862" width="540" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="h3r" value="THE E1 FIX" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#0a2b1e;strokeColor=#34d399;fontColor=#34d399;fontFamily=Courier New;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="862" width="540" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c1l" value="infer.py wraps ENGLISH prompts in PhoGPT&#39;s Vietnamese&#xa;template — so 42 of 47 EN prompts were answered in&#xa;Vietnamese" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#221a33;strokeColor=#a78bfa;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="900" width="540" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="c1r" value="Per-model template correctness in the EN arm" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#0a2b1e;strokeColor=#34d399;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="700" y="900" width="540" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="c1e" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=classic;endFill=1;strokeWidth=2;dashed=1;strokeColor=#34d399;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="c1l" target="c1r">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c2l" value="PhoGPT&#39;s EN &quot;refusals&quot; are largely degenerate output —&#xa;greeting loops, question echoes — which the judge rubric&#xa;counts as refusal, inflating the +24pp gap" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#221a33;strokeColor=#a78bfa;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="990" width="540" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="c2r" value="A rubric that separates coherent refusal from&#xa;degenerate output" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#0a2b1e;strokeColor=#34d399;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="700" y="990" width="540" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="c2e" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=classic;endFill=1;strokeWidth=2;dashed=1;strokeColor=#34d399;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="c2l" target="c2r">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="b4" value="WORTH CARRYING FORWARD — Blindfold got these right" style="swimlane;startSize=30;fillColor=#0a2b1e;strokeColor=#34d399;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=13;fontStyle=1;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1102" width="1200" height="146" as="geometry" />
+        </mxCell>
+        <mxCell id="b4a" value="the infer.py two-function&#xa;model contract&#xa;(init / generate), shipped&#xa;inside the owner&#39;s private&#xa;dataset" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0a2b1e;strokeColor=#34d399;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=11;verticalAlign=top;spacingTop=4;" vertex="1" parent="b4">
+          <mxGeometry x="20" y="42" width="228" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="b4b" value="the mock / private&#xa;split" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0a2b1e;strokeColor=#34d399;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=11;verticalAlign=top;spacingTop=4;" vertex="1" parent="b4">
+          <mxGeometry x="258" y="42" width="228" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="b4c" value="the native_cultural /&#xa;translated taxonomy" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0a2b1e;strokeColor=#34d399;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=11;verticalAlign=top;spacingTop=4;" vertex="1" parent="b4">
+          <mxGeometry x="496" y="42" width="228" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="b4d" value="detect_language()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0a2b1e;strokeColor=#34d399;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=11;verticalAlign=top;spacingTop=4;" vertex="1" parent="b4">
+          <mxGeometry x="734" y="42" width="228" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="b4e" value="the benchmark itself, with&#xa;real per-row provenance&#xa;(one global_or_local label&#xa;bug to fix)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0a2b1e;strokeColor=#34d399;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=11;verticalAlign=top;spacingTop=4;" vertex="1" parent="b4">
+          <mxGeometry x="972" y="42" width="228" height="90" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="drawio" version="26.0.0">
+  <diagram name="module-containment">
+    <mxGraphModel background="#0a0f1c">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="One file per dependency — where upstream drift can and cannot reach" style="text;html=1;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=17;fontColor=#dbe4f0;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="24" width="1520" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="the layout is the argument: each external dependency touches exactly one file, so the blast radius of upstream drift is one file" style="text;html=1;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=12;fontColor=#9fb0c3;" vertex="1" parent="1">
+          <mxGeometry x="30" y="54" width="1520" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="tree" value="crucible/" style="swimlane;startSize=34;fillColor=#1a2233;strokeColor=#8b98ab;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=13;fontStyle=1;html=1;align=left;spacingLeft=8;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="440" y="100" width="656" height="646" as="geometry" />
+        </mxCell>
+        <mxCell id="pkg_exec" value="├── execution/" style="swimlane;startSize=32;fillColor=#101725;strokeColor=#2dd4bf;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;fontStyle=1;html=1;align=left;spacingLeft=8;pointerEvents=0;" vertex="1" parent="tree">
+          <mxGeometry x="14" y="40" width="628" height="312" as="geometry" />
+        </mxCell>
+        <mxCell id="f_endpoint" value="├──&amp;nbsp;endpoint.py&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;ModelEndpoint · chat() — seam 1 (httpx, defended boundary)" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#141b29;strokeColor=#8b98ab;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=11;" vertex="1" parent="pkg_exec">
+          <mxGeometry x="12" y="40" width="600" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="f_espec" value="├──&amp;nbsp;spec.py&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;EnsembleSpec · SamplingParams · spec_hash()" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#141b29;strokeColor=#8b98ab;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=11;" vertex="1" parent="pkg_exec">
+          <mxGeometry x="12" y="76" width="600" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="f_backend" value="├──&amp;nbsp;backend.py&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;ExecutionBackend protocol · NaiveBackend (oracle / fallback)" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#141b29;strokeColor=#8b98ab;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=11;" vertex="1" parent="pkg_exec">
+          <mxGeometry x="12" y="112" width="600" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="f_url4" value="└──&amp;nbsp;url4_backend.py&amp;nbsp;&amp;nbsp;&amp;nbsp;the default path — the only file that ever imports url4" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#221a33;strokeColor=#a78bfa;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=11;" vertex="1" parent="pkg_exec">
+          <mxGeometry x="12" y="148" width="600" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="del_url4" value="deletion test — url4_backend.py&#xa;delete it and the system STILL RUNS, on NaiveBackend. What is lost: expression provenance + StaticIOLayer egress denial. Nothing else breaks — the risky coupling is optional." style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;fillColor=#0a2b1e;strokeColor=#34d399;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=11;" vertex="1" parent="pkg_exec">
+          <mxGeometry x="12" y="194" width="600" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="del_exec" value="deletion test — delete execution/ and every consumer re-invents fan-out, reduction, and provenance hashing" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;align=left;spacingLeft=10;fillColor=#0a0f1c;strokeColor=#f87171;fontColor=#f0b8b8;fontFamily=Courier New;fontSize=11;" vertex="1" parent="pkg_exec">
+          <mxGeometry x="12" y="262" width="600" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="pkg_bench" value="├── benchmarks/" style="swimlane;startSize=32;fillColor=#101725;strokeColor=#e8b339;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;fontStyle=1;html=1;align=left;spacingLeft=8;pointerEvents=0;" vertex="1" parent="tree">
+          <mxGeometry x="14" y="368" width="628" height="174" as="geometry" />
+        </mxCell>
+        <mxCell id="f_bspec" value="├──&amp;nbsp;spec.py&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;BenchmarkSpec · CaseSet · JudgeSpec · AggregatorSpec — seam 3" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#141b29;strokeColor=#8b98ab;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=11;" vertex="1" parent="pkg_bench">
+          <mxGeometry x="12" y="40" width="600" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="f_emitter" value="└──&amp;nbsp;emitter.py&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;lowers BenchmarkSpec → [data]/[commands] + the /tmp config" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#2e250f;strokeColor=#d7b357;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=11;" vertex="1" parent="pkg_bench">
+          <mxGeometry x="12" y="76" width="600" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="del_bench" value="deletion test — delete benchmarks/ and every consumer re-invents private-benchmark registration" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;align=left;spacingLeft=10;fillColor=#0a0f1c;strokeColor=#f87171;fontColor=#f0b8b8;fontFamily=Courier New;fontSize=11;" vertex="1" parent="pkg_bench">
+          <mxGeometry x="12" y="122" width="600" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="f_runner" value="├──&amp;nbsp;runner.py&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;drives ExecutionBackend.execute() over the case routes, one pass per candidate" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#141b29;strokeColor=#8b98ab;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=11;" vertex="1" parent="tree">
+          <mxGeometry x="14" y="558" width="628" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="f_errors" value="└──&amp;nbsp;errors.py&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;ModelCallError, ..." style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#141b29;strokeColor=#8b98ab;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=11;" vertex="1" parent="tree">
+          <mxGeometry x="14" y="598" width="628" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="dep_url4" value="url4&#xa;the engine&#xa;a fast-moving 1.x alpha,&#xa;shipping releases weekly" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;fillColor=#221a33;strokeColor=#a78bfa;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="30" y="266" width="190" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="dep_cfg" value="url4 config formats&#xa;[data] / [commands]&#xa;file shapes on disk —&#xa;nothing is imported" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;fillColor=#2e250f;strokeColor=#d7b357;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="30" y="520" width="190" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="badge_url4" value="reaches 1 file · 0 others" style="text;html=1;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=11;fontStyle=1;fontColor=#a78bfa;" vertex="1" parent="1">
+          <mxGeometry x="30" y="350" width="190" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="badge_cfg" value="reaches 1 file · 0 others" style="text;html=1;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=11;fontStyle=1;fontColor=#d7b357;" vertex="1" parent="1">
+          <mxGeometry x="30" y="604" width="190" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="e_url4" value="engine drift costs one file" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeWidth=2.5;strokeColor=#a78bfa;fontColor=#a78bfa;fontFamily=Courier New;fontSize=11;fontStyle=1;labelBackgroundColor=#0a0f1c;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="dep_url4" target="f_url4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_cfg" value="config-format drift costs one file" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeWidth=2.5;strokeColor=#d7b357;fontColor=#d7b357;fontFamily=Courier New;fontSize=11;fontStyle=1;labelBackgroundColor=#0a0f1c;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="dep_cfg" target="f_emitter">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="-14" as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="panel" value="the two backends — and the harness that binds them" style="swimlane;startSize=34;fillColor=#1a2233;strokeColor=#2dd4bf;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;fontStyle=1;html=1;align=left;spacingLeft=8;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="1136" y="100" width="414" height="646" as="geometry" />
+        </mxCell>
+        <mxCell id="p_url4" value="Url4Backend — the default&#xa;&#xa;· runs the url4 engine in-process (Url4Node)&#xa;· per-route upstreams — one handler per owner&#xa;· outbound=StaticIOLayer() denies every fetch&#xa;&amp;nbsp;&amp;nbsp;except the declared routes&#xa;· compiled expression text gives provenance&#xa;&amp;nbsp;&amp;nbsp;natively" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;fillColor=#221a33;strokeColor=#a78bfa;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=11;" vertex="1" parent="panel">
+          <mxGeometry x="16" y="48" width="382" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="p_harness" value="equivalence harness&#xa;same spec · same inputs · mock server&#xa;→ identical per-case records through BOTH&#xa;gates every Url4Backend change" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;fillColor=#0a2b1e;strokeColor=#34d399;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=11;" vertex="1" parent="panel">
+          <mxGeometry x="16" y="246" width="382" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="p_naive" value="NaiveBackend — oracle &amp; fallback&#xa;&#xa;· ~50–100 lines&#xa;· asyncio.gather fan-out&#xa;· plain-Python reduce (single / vote / synthesize)&#xa;· zero engine imports" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;fillColor=#0c2530;strokeColor=#2dd4bf;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=11;" vertex="1" parent="panel">
+          <mxGeometry x="16" y="381" width="382" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="h1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;strokeWidth=2;strokeColor=#34d399;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="panel" source="p_url4" target="p_harness">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="h2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;strokeWidth=2;strokeColor=#34d399;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="panel" source="p_harness" target="p_naive">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p_cost" value="fallback is real, not theoretical — the harness is what proves it" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;align=left;spacingLeft=10;fillColor=#0a0f1c;strokeColor=#34d399;fontColor=#9fe6c6;fontFamily=Courier New;fontSize=11;" vertex="1" parent="panel">
+          <mxGeometry x="16" y="566" width="382" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="footer" value="where drift cannot reach: no other file in the tree imports url4 or knows a url4 config shape. The two arrows above are the complete set of entry points." style="rounded=1;whiteSpace=wrap;html=1;dashed=1;align=left;spacingLeft=12;fillColor=#0a0f1c;strokeColor=#8b98ab;fontColor=#9fb0c3;fontFamily=Courier New;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="30" y="770" width="1520" height="46" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

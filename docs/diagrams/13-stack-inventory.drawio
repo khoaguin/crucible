@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="drawio" version="26.0.0">
+  <diagram name="stack-inventory">
+    <mxGraphModel background="#0a0f1c">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="The stack Crucible consumes — and the two places we don't just consume it" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=17;fontColor=#dbe4f0;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="24" width="1184" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="Crucible is a consumer, not a platform. Green = take it as it ships. Amber = the default is not safe enough. Red = nobody built it yet." style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=11;fontColor=#9fb0c3;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="50" width="1184" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="c1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a2233;strokeColor=#e8b339;strokeWidth=2;arcSize=6;fontFamily=Courier New;" vertex="1" parent="1">
+          <mxGeometry x="40" y="76" width="380" height="352" as="geometry" />
+        </mxCell>
+        <mxCell id="c1L" value="TRUST" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=10;fontColor=#9fb0c3;fontStyle=1;" vertex="1" parent="c1">
+          <mxGeometry x="14" y="12" width="150" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="c1T" value="ready — we harden a default" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#33240a;strokeColor=#e8b339;fontFamily=Courier New;fontSize=10;fontColor=#e8b339;align=center;verticalAlign=middle;" vertex="1" parent="c1">
+          <mxGeometry x="173" y="8" width="193" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="c1N" value="PySyft · packages/syft-enclave" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=13;fontColor=#dbe4f0;fontStyle=1;" vertex="1" parent="c1">
+          <mxGeometry x="14" y="34" width="352" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="c1S" value="open source" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=10;fontColor=#9fb0c3;fontStyle=0;" vertex="1" parent="c1">
+          <mxGeometry x="14" y="54" width="352" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="c1D" value="" style="line;html=1;strokeColor=#334055;" vertex="1" parent="c1">
+          <mxGeometry x="14" y="70" width="352" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="c1h0" value="REAL TODAY" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=9;fontColor=#9fb0c3;fontStyle=1;" vertex="1" parent="c1">
+          <mxGeometry x="14" y="80" width="352" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="c1b0" value="· Confidential Space terraform, incl. GPU deploys&#xa;· EAT-JWT attestation over a Unix socket&#xa;· N-party unanimous approval (data_owners: list)&#xa;· job runner: unconfined subprocess; the seccomp&#xa;&#160;&#160;sandbox is on an unmerged branch&#xa;· end-to-end Gemma demo" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=11;fontColor=#dbe4f0;fontStyle=0;" vertex="1" parent="c1">
+          <mxGeometry x="14" y="96" width="352" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="c1h1" value="WHAT WE DO" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=9;fontColor=#2dd4bf;fontStyle=1;" vertex="1" parent="c1">
+          <mxGeometry x="14" y="209" width="352" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="c1b1" value="Image-digest pinning is opt-in upstream;&#xa;Crucible makes it mandatory.&#xa;Two open gaps: attestation-token freshness&#xa;(expired tokens accepted for 30 days) and&#xa;network egress (job sandbox not merged)." style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=11;fontColor=#dbe4f0;fontStyle=0;" vertex="1" parent="c1">
+          <mxGeometry x="14" y="225" width="352" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="c2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a2233;strokeColor=#34d399;strokeWidth=2;arcSize=6;fontFamily=Courier New;" vertex="1" parent="1">
+          <mxGeometry x="442" y="76" width="380" height="352" as="geometry" />
+        </mxCell>
+        <mxCell id="c2L" value="EXECUTION" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=10;fontColor=#9fb0c3;fontStyle=1;" vertex="1" parent="c2">
+          <mxGeometry x="14" y="12" width="150" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="c2T" value="ready" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#0a2b1e;strokeColor=#34d399;fontFamily=Courier New;fontSize=10;fontColor=#34d399;align=center;verticalAlign=middle;" vertex="1" parent="c2">
+          <mxGeometry x="290" y="8" width="76" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="c2N" value="ScreamingFace" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=13;fontColor=#dbe4f0;fontStyle=1;" vertex="1" parent="c2">
+          <mxGeometry x="14" y="34" width="352" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="c2S" value="Apache-2.0" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=10;fontColor=#9fb0c3;fontStyle=0;" vertex="1" parent="c2">
+          <mxGeometry x="14" y="54" width="352" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="c2D" value="" style="line;html=1;strokeColor=#334055;" vertex="1" parent="c2">
+          <mxGeometry x="14" y="70" width="352" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="c2h0" value="REAL TODAY" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=9;fontColor=#9fb0c3;fontStyle=1;" vertex="1" parent="c2">
+          <mxGeometry x="14" y="80" width="352" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="c2b0" value="· url4 1.4.1 + screamingface 0.1.1.post7&#xa;&#160;&#160;on PyPI — Crucible pins both exactly&#xa;&#160;&#160;(the wheel vendors engine, aigateway, url4)&#xa;· repo: screamingface-engine 1.5.0, aigateway 0.2.1&#xa;· Fusion → URL4 compile → engine dispatch&#xa;· LiteLLM-compatible gateway&#xa;· screamingface up runs the local stack" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=11;fontColor=#dbe4f0;fontStyle=0;" vertex="1" parent="c2">
+          <mxGeometry x="14" y="96" width="352" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="c2h1" value="WHAT WE DO" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=9;fontColor=#2dd4bf;fontStyle=1;" vertex="1" parent="c2">
+          <mxGeometry x="14" y="209" width="352" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="c2b1" value="Run url4 in-process inside the enclave;&#xa;its routes reach only local model servers —&#xa;no external fetch on the url4 path." style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=11;fontColor=#dbe4f0;fontStyle=0;" vertex="1" parent="c2">
+          <mxGeometry x="14" y="225" width="352" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="c3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a2233;strokeColor=#f87171;strokeWidth=2;arcSize=6;fontFamily=Courier New;" vertex="1" parent="1">
+          <mxGeometry x="844" y="76" width="380" height="352" as="geometry" />
+        </mxCell>
+        <mxCell id="c3L" value="BENCHMARKING" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=10;fontColor=#9fb0c3;fontStyle=1;" vertex="1" parent="c3">
+          <mxGeometry x="14" y="12" width="150" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="c3T" value="gap we close" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#2e1414;strokeColor=#f87171;fontFamily=Courier New;fontSize=10;fontColor=#f87171;align=center;verticalAlign=middle;" vertex="1" parent="c3">
+          <mxGeometry x="266" y="8" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="c3N" value="ScreamingFace benchmark pipeline" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=13;fontColor=#dbe4f0;fontStyle=1;" vertex="1" parent="c3">
+          <mxGeometry x="14" y="34" width="352" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="c3S" value="" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=10;fontColor=#9fb0c3;fontStyle=0;" vertex="1" parent="c3">
+          <mxGeometry x="14" y="54" width="352" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="c3D" value="" style="line;html=1;strokeColor=#334055;" vertex="1" parent="c3">
+          <mxGeometry x="14" y="70" width="352" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="c3h0" value="REAL TODAY" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=9;fontColor=#9fb0c3;fontStyle=1;" vertex="1" parent="c3">
+          <mxGeometry x="14" y="80" width="352" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="c3b0" value="· main: 8 SF boards over six asset bundles&#xa;&#160;&#160;+ 24 inspect_evals imports (pin: 6 boards)&#xa;· plugin socket: entry-point discovery (OME-1115)&#xa;· each Benchmark carries a BenchmarkInstaller&#xa;&#160;&#160;(node, assets_root) registering its routes&#xa;&#160;&#160;at Runner boot&#xa;· a CheckSurface declares mid-run checking" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=11;fontColor=#dbe4f0;fontStyle=0;" vertex="1" parent="c3">
+          <mxGeometry x="14" y="96" width="352" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="c3h1" value="THE GAP" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=9;fontColor=#f87171;fontStyle=1;" vertex="1" parent="c3">
+          <mxGeometry x="14" y="194" width="352" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="c3b1" value="A curated catalog — BenchmarkRegistry is an&#xa;immutable container, not a socket. SF's&#xa;refactor closes third-party authorship;&#xa;content private from the platform is not&#xa;theirs to close, and stays ours." style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=11;fontColor=#dbe4f0;fontStyle=0;" vertex="1" parent="c3">
+          <mxGeometry x="14" y="210" width="352" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c3h2" value="WHAT WE DO" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=9;fontColor=#2dd4bf;fontStyle=1;" vertex="1" parent="c3">
+          <mxGeometry x="14" y="278" width="352" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="c3b2" value="Crucible builds BenchmarkSpec + a one-file&#xa;config-emitter, and upstreams what it learns." style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=11;fontColor=#dbe4f0;fontStyle=0;" vertex="1" parent="c3">
+          <mxGeometry x="14" y="294" width="352" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="c4" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a2233;strokeColor=#34d399;strokeWidth=2;arcSize=6;fontFamily=Courier New;" vertex="1" parent="1">
+          <mxGeometry x="40" y="452" width="380" height="176" as="geometry" />
+        </mxCell>
+        <mxCell id="c4L" value="TRANSPORT" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=10;fontColor=#9fb0c3;fontStyle=1;" vertex="1" parent="c4">
+          <mxGeometry x="14" y="12" width="150" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="c4T" value="ready" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#0a2b1e;strokeColor=#34d399;fontFamily=Courier New;fontSize=10;fontColor=#34d399;align=center;verticalAlign=middle;" vertex="1" parent="c4">
+          <mxGeometry x="290" y="8" width="76" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="c4N" value="PySyft · syft-client" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=13;fontColor=#dbe4f0;fontStyle=1;" vertex="1" parent="c4">
+          <mxGeometry x="14" y="34" width="352" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="c4S" value="open source" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=10;fontColor=#9fb0c3;fontStyle=0;" vertex="1" parent="c4">
+          <mxGeometry x="14" y="54" width="352" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="c4D" value="" style="line;html=1;strokeColor=#334055;" vertex="1" parent="c4">
+          <mxGeometry x="14" y="70" width="352" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="c4h0" value="REAL TODAY" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=9;fontColor=#9fb0c3;fontStyle=1;" vertex="1" parent="c4">
+          <mxGeometry x="14" y="80" width="352" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="c4b0" value="· compute-to-data file sync&#xa;· transport (e.g. Google Drive) untrusted by&#xa;&#160;&#160;design — E2E-encrypted and signed when&#xa;&#160;&#160;every party logs in with encryption=True" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=11;fontColor=#dbe4f0;fontStyle=0;" vertex="1" parent="c4">
+          <mxGeometry x="14" y="96" width="352" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="c5" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a2233;strokeColor=#34d399;strokeWidth=2;arcSize=6;fontFamily=Courier New;" vertex="1" parent="1">
+          <mxGeometry x="442" y="452" width="380" height="176" as="geometry" />
+        </mxCell>
+        <mxCell id="c5L" value="INFERENCE" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=10;fontColor=#9fb0c3;fontStyle=1;" vertex="1" parent="c5">
+          <mxGeometry x="14" y="12" width="150" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="c5T" value="ready" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#0a2b1e;strokeColor=#34d399;fontFamily=Courier New;fontSize=10;fontColor=#34d399;align=center;verticalAlign=middle;" vertex="1" parent="c5">
+          <mxGeometry x="290" y="8" width="76" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="c5N" value="llama.cpp / vLLM / MLX" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=13;fontColor=#dbe4f0;fontStyle=1;" vertex="1" parent="c5">
+          <mxGeometry x="14" y="34" width="352" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="c5S" value="open source" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=10;fontColor=#9fb0c3;fontStyle=0;" vertex="1" parent="c5">
+          <mxGeometry x="14" y="54" width="352" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="c5D" value="" style="line;html=1;strokeColor=#334055;" vertex="1" parent="c5">
+          <mxGeometry x="14" y="70" width="352" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="c5h0" value="REAL TODAY" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=9;fontColor=#9fb0c3;fontStyle=1;" vertex="1" parent="c5">
+          <mxGeometry x="14" y="80" width="352" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="c5b0" value="· one model-server interface, backend&#xa;&#160;&#160;autodetected — CPU, CUDA, Apple Metal" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=11;fontColor=#dbe4f0;fontStyle=0;" vertex="1" parent="c5">
+          <mxGeometry x="14" y="96" width="352" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="c6" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a2233;strokeColor=#8b98ab;strokeWidth=2;arcSize=6;fontFamily=Courier New;" vertex="1" parent="1">
+          <mxGeometry x="844" y="452" width="380" height="176" as="geometry" />
+        </mxCell>
+        <mxCell id="c6L" value="REFERENCE" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=10;fontColor=#9fb0c3;fontStyle=1;" vertex="1" parent="c6">
+          <mxGeometry x="14" y="12" width="150" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="c6T" value="reference only" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#1a2233;strokeColor=#8b98ab;fontFamily=Courier New;fontSize=10;fontColor=#9fb0c3;align=center;verticalAlign=middle;" vertex="1" parent="c6">
+          <mxGeometry x="254" y="8" width="112" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="c6N" value="inspect_evals" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=13;fontColor=#dbe4f0;fontStyle=1;" vertex="1" parent="c6">
+          <mxGeometry x="14" y="34" width="352" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="c6S" value="v0.15.0" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=10;fontColor=#9fb0c3;fontStyle=0;" vertex="1" parent="c6">
+          <mxGeometry x="14" y="54" width="352" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="c6D" value="" style="line;html=1;strokeColor=#334055;" vertex="1" parent="c6">
+          <mxGeometry x="14" y="70" width="352" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="c6h0" value="REAL TODAY" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=9;fontColor=#9fb0c3;fontStyle=1;" vertex="1" parent="c6">
+          <mxGeometry x="14" y="80" width="352" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="c6b0" value="· UK AISI-led eval catalog: 129 packages,&#xa;&#160;&#160;247 tasks&#xa;· evidence for the four-stage seam shape&#xa;· nothing to build" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=11;fontColor=#dbe4f0;fontStyle=0;" vertex="1" parent="c6">
+          <mxGeometry x="14" y="96" width="352" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="foot" value="" style="rounded=1;arcSize=8;html=1;fillColor=#141b29;strokeColor=#334055;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="660" width="1184" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="f0" value="3 ready" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#0a2b1e;strokeColor=#34d399;fontFamily=Courier New;fontSize=12;fontColor=#34d399;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="72" y="672" width="248" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="f1" value="1 default we harden" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#33240a;strokeColor=#e8b339;fontFamily=Courier New;fontSize=12;fontColor=#e8b339;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="360" y="672" width="248" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="f2" value="1 gap we close" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#2e1414;strokeColor=#f87171;fontFamily=Courier New;fontSize=12;fontColor=#f87171;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="648" y="672" width="248" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="f3" value="1 reference" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#1a2233;strokeColor=#8b98ab;fontFamily=Courier New;fontSize=12;fontColor=#9fb0c3;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="936" y="672" width="248" height="24" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

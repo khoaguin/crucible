@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="drawio" version="26.0.0">
+  <diagram name="sf-catalog">
+    <mxGraphModel background="#0a0f1c">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="h1" value="OM authors it (SF source)" style="text;html=1;align=left;verticalAlign=middle;fontFamily=Courier New;fontColor=#9fb0c3;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="h2" value="image build" style="text;html=1;align=left;verticalAlign=middle;fontFamily=Courier New;fontColor=#9fb0c3;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="40" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="h3" value="researcher runs a slice" style="text;html=1;align=left;verticalAlign=middle;fontFamily=Courier New;fontColor=#9fb0c3;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="990" y="40" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="src" value="manifest.yaml&#xa;prepare.py&#xa;aggregate.py&#xa;url4.toml route" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=14;fillColor=#221a33;strokeColor=#a78bfa;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="90" width="240" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="build" value="docker build&#xa;(cases baked&#xa;into the image)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a2233;strokeColor=#8b98ab;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="380" y="90" width="220" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="img" value="runner image&#xa;(the menu)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#33240a;strokeColor=#e8b339;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="700" y="90" width="190" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="ev" value="sf.evaluate(model,&#xa;  benchmark=&quot;draco-lite&quot;,&#xa;  limit=10)  # ← the slice" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=14;fillColor=#0c2530;strokeColor=#2dd4bf;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="990" y="90" width="300" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeColor=#9fb0c3;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="src" target="build">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeColor=#9fb0c3;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="build" target="img">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeColor=#9fb0c3;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="img" target="ev">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cap" value="TODAY: no plugin API, no upload endpoint — onboarding a benchmark = editing SF source + cutting a release.&#xa;BenchmarkRegistry is a validated deployment container (immutable, no register()), not a socket.&#xa;SF&#39;s benchmark-abstraction refactor closes third-party authorship; private content stays Crucible&#39;s half." style="text;html=1;align=left;verticalAlign=middle;fontFamily=Courier New;fontColor=#d7b357;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="235" width="1250" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
