@@ -200,7 +200,7 @@
         <mxCell id="k7c" value="7" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f87171;strokeColor=#f87171;fontColor=#08131f;fontFamily=Courier New;fontSize=13;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="1236" y="723" width="28" height="28" as="geometry" />
         </mxCell>
-        <mxCell id="k7t" value="&lt;b&gt;Stale attestation token replayed to pass off a retired enclave as live&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#9fb0c3&quot;&gt;pinned 0.1.1: no key binding (dev binds when encrypting); no freshness nonce anywhere — the runner never fills the slot&lt;/font&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Courier New;fontColor=#dbe4f0;fontSize=11;" vertex="1" parent="1">
+        <mxCell id="k7t" value="&lt;b&gt;Stale attestation token replayed to pass off a retired enclave as live&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#9fb0c3&quot;&gt;key-bound only when the verifier encrypts (Crucible requires it); no freshness nonce anywhere — the runner never fills the slot&lt;/font&gt;" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontFamily=Courier New;fontColor=#dbe4f0;fontSize=11;" vertex="1" parent="1">
           <mxGeometry x="1274" y="704" width="504" height="66" as="geometry" />
         </mxCell>
 

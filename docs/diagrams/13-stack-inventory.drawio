@@ -62,7 +62,7 @@
         <mxCell id="c2h0" value="REAL TODAY" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=9;fontColor=#9fb0c3;fontStyle=1;" vertex="1" parent="c2">
           <mxGeometry x="14" y="80" width="352" height="12" as="geometry" />
         </mxCell>
-        <mxCell id="c2b0" value="· url4 1.4.1 + screamingface 0.1.1.post7&#xa;&#160;&#160;on PyPI — Crucible pins both exactly&#xa;&#160;&#160;(the wheel vendors engine, aigateway, url4)&#xa;· repo: screamingface-engine 1.5.0, aigateway 0.2.1&#xa;· Fusion → URL4 compile → engine dispatch&#xa;· LiteLLM-compatible gateway&#xa;· screamingface up runs the local stack" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=11;fontColor=#dbe4f0;fontStyle=0;" vertex="1" parent="c2">
+        <mxCell id="c2b0" value="· screamingface + url4 from main&#xa;&#160;&#160;one commit, recorded in uv.lock&#xa;&#160;&#160;(the wheel vendors engine, aigateway, url4)&#xa;· repo: screamingface-engine 1.5.0, aigateway 0.2.1&#xa;· Fusion → URL4 compile → engine dispatch&#xa;· LiteLLM-compatible gateway&#xa;· screamingface up runs the local stack" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=11;fontColor=#dbe4f0;fontStyle=0;" vertex="1" parent="c2">
           <mxGeometry x="14" y="96" width="352" height="105" as="geometry" />
         </mxCell>
         <mxCell id="c2h1" value="WHAT WE DO" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=9;fontColor=#2dd4bf;fontStyle=1;" vertex="1" parent="c2">
@@ -92,7 +92,7 @@
         <mxCell id="c3h0" value="REAL TODAY" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=9;fontColor=#9fb0c3;fontStyle=1;" vertex="1" parent="c3">
           <mxGeometry x="14" y="80" width="352" height="12" as="geometry" />
         </mxCell>
-        <mxCell id="c3b0" value="· main: 8 SF boards over six asset bundles&#xa;&#160;&#160;+ 24 inspect_evals imports (pin: 6 boards)&#xa;· plugin socket: entry-point discovery (OME-1115)&#xa;· each Benchmark carries a BenchmarkInstaller&#xa;&#160;&#160;(node, assets_root) registering its routes&#xa;&#160;&#160;at Runner boot&#xa;· a CheckSurface declares mid-run checking" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=11;fontColor=#dbe4f0;fontStyle=0;" vertex="1" parent="c3">
+        <mxCell id="c3b0" value="· main: 8 SF boards over six asset bundles&#xa;&#160;&#160;+ 24 inspect_evals imports (plugin)&#xa;· plugin socket: entry-point discovery (OME-1115)&#xa;· each Benchmark carries a BenchmarkInstaller&#xa;&#160;&#160;(node, assets_root) registering its routes&#xa;&#160;&#160;at Runner boot&#xa;· a CheckSurface declares mid-run checking" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=11;fontColor=#dbe4f0;fontStyle=0;" vertex="1" parent="c3">
           <mxGeometry x="14" y="96" width="352" height="90" as="geometry" />
         </mxCell>
         <mxCell id="c3h1" value="THE GAP" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=9;fontColor=#f87171;fontStyle=1;" vertex="1" parent="c3">
@@ -176,7 +176,7 @@
         <mxCell id="c6h0" value="REAL TODAY" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=9;fontColor=#9fb0c3;fontStyle=1;" vertex="1" parent="c6">
           <mxGeometry x="14" y="80" width="352" height="12" as="geometry" />
         </mxCell>
-        <mxCell id="c6b0" value="· UK AISI-led eval catalog: 129 packages,&#xa;&#160;&#160;247 tasks&#xa;· evidence for the four-stage seam shape&#xa;· nothing to build" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=11;fontColor=#dbe4f0;fontStyle=0;" vertex="1" parent="c6">
+        <mxCell id="c6b0" value="· UK AISI-led eval catalog: 129 packages,&#xa;&#160;&#160;246 tasks + 1 scorer&#xa;· evidence for the four-stage seam shape&#xa;· nothing to build" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=11;fontColor=#dbe4f0;fontStyle=0;" vertex="1" parent="c6">
           <mxGeometry x="14" y="96" width="352" height="45" as="geometry" />
         </mxCell>
         <mxCell id="foot" value="" style="rounded=1;arcSize=8;html=1;fillColor=#141b29;strokeColor=#334055;dashed=1;" vertex="1" parent="1">
