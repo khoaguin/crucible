@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="drawio" version="26.0.0">
+  <diagram name="before-after">
+    <mxGraphModel background="#0a0f1c">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Crucible — an AI safety audit where nobody has to hand over their secret" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=17;fontColor=#dbe4f0;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="16" width="1360" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Same three parties, same three secrets. Today one of them must give theirs up; with Crucible they meet only inside sealed hardware." style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=11;fontColor=#9fb0c3;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="46" width="1360" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="today" value="TODAY — the test leaks, or the score can't be checked" style="swimlane;html=1;startSize=34;rounded=1;arcSize=3;fillColor=#2a1318;swimlaneFillColor=#0f1422;strokeColor=#f87171;fontColor=#f87171;fontFamily=Courier New;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="84" width="1360" height="232" as="geometry" />
+        </mxCell>
+        <mxCell id="orgA" value="👤 Safety org&#xa;holds: a private benchmark&#xa;(real scam scripts, hazardous prompts)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a2233;strokeColor=#8b98ab;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" vertex="1" parent="today">
+          <mxGeometry x="30" y="56" width="280" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="labA" value="🤖 AI lab&#xa;holds: private model weights&#xa;runs the benchmark itself" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a2233;strokeColor=#8b98ab;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" vertex="1" parent="today">
+          <mxGeometry x="540" y="56" width="280" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="audA" value="👤 Auditor / regulator&#xa;gets: a self-reported score&#xa;⚠️ no way to check it" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2a1318;strokeColor=#f87171;fontColor=#fecaca;fontFamily=Courier New;fontSize=12;" vertex="1" parent="today">
+          <mxGeometry x="1050" y="56" width="280" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="eA1" value="hands over&#xa;the prompts&#xa;⚠️ lab can now&#xa;train on the test" style="endArrow=classic;endFill=1;html=1;strokeColor=#f87171;fontColor=#fca5a5;fontFamily=Courier New;fontSize=11;labelBackgroundColor=#0f1422;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="today" source="orgA" target="labA">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eA2" value="&quot;trust us&quot; score" style="endArrow=classic;endFill=1;html=1;strokeColor=#f87171;fontColor=#fca5a5;fontFamily=Courier New;fontSize=11;labelBackgroundColor=#0f1422;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="today" source="labA" target="audA">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="noteA" value="…or the org keeps its prompts, and the audit never happens. The most dangerous tests (bio, cyber) are exactly the ones nobody can share." style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=11;fontColor=#9fb0c3;fontStyle=0;" vertex="1" parent="today">
+          <mxGeometry x="30" y="184" width="1300" height="36" as="geometry" />
+        </mxCell>
+
+        <mxCell id="after" value="WITH CRUCIBLE — secrets meet only inside an attested enclave; only a signed scorecard leaves" style="swimlane;html=1;startSize=34;rounded=1;arcSize=3;fillColor=#0a2b1e;swimlaneFillColor=#0f1422;strokeColor=#34d399;fontColor=#34d399;fontFamily=Courier New;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="340" width="1360" height="262" as="geometry" />
+        </mxCell>
+        <mxCell id="partiesB" value="👤 K safety orgs&#xa;🤖 M AI labs&#xa;👤 one auditor&#xa;each keeps its own secret" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a2233;strokeColor=#8b98ab;fontColor=#dbe4f0;fontFamily=Courier New;fontSize=12;" vertex="1" parent="after">
+          <mxGeometry x="30" y="56" width="280" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="enclaveB" value="🔒 Attested enclave&#xa;(GCP Confidential Space)&#xa;prompts + weights + eval code meet here&#xa;hardware proves the exact code running&#xa;nobody can log in" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#13243d;strokeColor=#60a5fa;fontColor=#dbeafe;fontFamily=Courier New;fontSize=12;" vertex="1" parent="after">
+          <mxGeometry x="540" y="46" width="320" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="verifyB" value="✅ Signed scorecard&#xa;fixed schema, numbers only&#xa;anyone checks it offline&#xa;(crucible verify)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0a2b1e;strokeColor=#34d399;fontColor=#d1fae5;fontFamily=Courier New;fontSize=12;" vertex="1" parent="after">
+          <mxGeometry x="1050" y="56" width="280" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="eB1" value="encrypted secrets&#xa;+ every owner&#xa;approves (or vetoes)&#xa;the eval code" style="endArrow=classic;endFill=1;html=1;strokeColor=#d7b357;fontColor=#fde68a;fontFamily=Courier New;fontSize=11;labelBackgroundColor=#0f1422;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="after" source="partiesB" target="enclaveB">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eB2" value="the ONLY output" style="endArrow=classic;endFill=1;html=1;strokeColor=#34d399;fontColor=#6ee7b7;fontFamily=Courier New;fontSize=11;labelBackgroundColor=#0f1422;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="after" source="enclaveB" target="verifyB">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="noteB" value="Each safety org gets its own score and never sees another org's prompts. The lab never sees the test, so it can't train on it. The auditor never has to take anyone's word for the result." style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;whiteSpace=wrap;fontFamily=Courier New;fontSize=11;fontColor=#9fb0c3;fontStyle=0;" vertex="1" parent="after">
+          <mxGeometry x="30" y="212" width="1300" height="36" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
