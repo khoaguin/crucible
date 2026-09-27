@@ -1,0 +1,110 @@
+{
+  "inspect_ai/eval-decomposition": {
+    "branch": "main",
+    "built": "2026-09-27",
+    "date": "2026-07-30",
+    "manifest_hash": "2ceb821461b1",
+    "pin_differs": false,
+    "pin_fingerprint": null,
+    "sha": "1ea01a9e1b3c94db3cdf93ce5583ffebf86e159f"
+  },
+  "inspect_evals/catalog": {
+    "branch": "main",
+    "built": "2026-09-27",
+    "date": "2026-07-17",
+    "manifest_hash": "3fb426549806",
+    "pin_differs": false,
+    "pin_fingerprint": null,
+    "sha": "356c13d21fab83d3bf8420bea427abf3c70eefbf"
+  },
+  "pysyft/datasets-permissions": {
+    "branch": "dev",
+    "built": "2026-09-27",
+    "date": "2026-09-25",
+    "manifest_hash": "15d8d099683f",
+    "pin_differs": false,
+    "pin_fingerprint": "5b898d62d409",
+    "sha": "1e14d632a9636f93541d88aa2063a647cf7286ad"
+  },
+  "pysyft/enclave-model-api-example": {
+    "branch": "dev",
+    "built": "2026-09-27",
+    "date": "2026-09-25",
+    "manifest_hash": "1f95149f40de",
+    "pin_differs": false,
+    "pin_fingerprint": null,
+    "sha": "1e14d632a9636f93541d88aa2063a647cf7286ad"
+  },
+  "pysyft/syft": {
+    "branch": "dev",
+    "built": "2026-09-27",
+    "date": "2026-09-25",
+    "manifest_hash": "da89bb860f6b",
+    "pin_differs": false,
+    "pin_fingerprint": "ee271b72e602",
+    "sha": "1e14d632a9636f93541d88aa2063a647cf7286ad"
+  },
+  "pysyft/syft-enclave": {
+    "branch": "dev",
+    "built": "2026-09-27",
+    "date": "2026-09-25",
+    "manifest_hash": "ebf0f20107b5",
+    "pin_differs": false,
+    "pin_fingerprint": "ba330fc6ccbf",
+    "sha": "1e14d632a9636f93541d88aa2063a647cf7286ad"
+  },
+  "pysyft/syft-job": {
+    "branch": "dev",
+    "built": "2026-09-27",
+    "date": "2026-09-25",
+    "manifest_hash": "dad69d38509d",
+    "pin_differs": false,
+    "pin_fingerprint": "fbdec74d9539",
+    "sha": "1e14d632a9636f93541d88aa2063a647cf7286ad"
+  },
+  "screamingface/aigateway": {
+    "branch": "main",
+    "built": "2026-09-27",
+    "date": "2026-09-25",
+    "manifest_hash": "5b4a1c0a7c67",
+    "pin_differs": false,
+    "pin_fingerprint": "3c71d83ca325",
+    "sha": "69971220fc8e114d0b744ce430fd159683d40d36"
+  },
+  "screamingface/engine-benchmarks": {
+    "branch": "main",
+    "built": "2026-09-27",
+    "date": "2026-09-25",
+    "manifest_hash": "6f98d3463083",
+    "pin_differs": false,
+    "pin_fingerprint": "34c3c8b93567",
+    "sha": "69971220fc8e114d0b744ce430fd159683d40d36"
+  },
+  "screamingface/engine-core": {
+    "branch": "main",
+    "built": "2026-09-27",
+    "date": "2026-09-25",
+    "manifest_hash": "326ed0311783",
+    "pin_differs": false,
+    "pin_fingerprint": "d94e28638689",
+    "sha": "69971220fc8e114d0b744ce430fd159683d40d36"
+  },
+  "screamingface/screamingface-client": {
+    "branch": "main",
+    "built": "2026-09-27",
+    "date": "2026-09-25",
+    "manifest_hash": "9ebbcf715f1c",
+    "pin_differs": false,
+    "pin_fingerprint": "3d082d7ee95d",
+    "sha": "69971220fc8e114d0b744ce430fd159683d40d36"
+  },
+  "screamingface/url4": {
+    "branch": "main",
+    "built": "2026-09-27",
+    "date": "2026-09-25",
+    "manifest_hash": "f0f8eaf212d4",
+    "pin_differs": false,
+    "pin_fingerprint": "62ffedab0938",
+    "sha": "69971220fc8e114d0b744ce430fd159683d40d36"
+  }
+}
