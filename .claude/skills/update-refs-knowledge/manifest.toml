@@ -1,0 +1,208 @@
+# What the update-refs-knowledge skill tracks.
+#
+# One [[modules]] entry = one knowledge note in .refs-knowledge/<id>.md.
+# Editing a module's paths / exclude / focus changes its hash, so the next
+# `plan` marks it REBUILD. Nothing else needs touching.
+#
+#   paths        git pathspecs (repo-relative prefixes) that make up the module
+#   exclude      fnmatch patterns on repo-relative paths; `*` crosses `/`
+#   dists        PyPI distributions Crucible pins for this module (drift check)
+#   version_file where the local tree declares its version
+#   focus        what Crucible needs from this module; steers what the note covers
+#   diagram      default true: stamp refuses a note without a ```mermaid flow; false for catalogs
+#
+# [repos.*].url is where `clone` fetches the repo from; .role labels its edge in INDEX.md's map.
+# Where each clone sits on THIS machine is not recorded here: repos.local.toml (git-ignored)
+# maps repo name -> path, and a repo it doesn't name defaults to <crucible>/.refs-repos/<name>.
+
+default_exclude = ["*/tests/*", "tests/*", "*.lock", "*.png", "*.svg", "*.drawio"]
+
+[repos.pysyft]
+url = "https://github.com/OpenMined/PySyft"
+role = "trust layer: enclave + transport"
+
+[repos.screamingface]
+url = "https://github.com/ScreamingFace/screamingface"
+role = "execution engine"
+
+[repos.inspect_ai]
+url = "https://github.com/UKGovernmentBEIS/inspect_ai"
+role = "reference: eval decomposition"
+
+[repos.inspect_evals]
+url = "https://github.com/UKGovernmentBEIS/inspect_evals"
+role = "reference: eval catalog"
+
+# ── PySyft: the trust layer ─────────────────────────────────────────────────
+
+[[modules]]
+id = "pysyft/syft-enclave"
+repo = "pysyft"
+paths = ["packages/syft-enclave"]
+dists = ["syft-enclave"]
+version_file = "packages/syft-enclave/pyproject.toml"
+focus = """
+Confidential Space deploy + EAT-JWT attestation. Crucible cares about: the attestation
+claim set and how it is verified (AppraisalPolicy and its defaults — expected_image_digest=None
+SKIPS the digest check); digest-pinned deploys (terraform image_digest vs image_tag);
+N-party unanimous approval (data_owners list) and approval state; JWT expiry / token
+freshness; GPU (H100 CC) deploy path; the job-client API a Crucible runner would call.
+"""
+
+[[modules]]
+id = "pysyft/syft-job"
+repo = "pysyft"
+paths = ["packages/syft-job"]
+dists = ["syft-job"]
+version_file = "packages/syft-job/pyproject.toml"
+focus = """
+Job submission and the sandboxed job runner. Crucible cares about: the opt-in kernel
+sandbox (syft_job.sandbox: privilege drop, no_new_privs, seccomp socket denial) and how it
+is switched on; job lifecycle/states; how job code and outputs move; what a job can reach.
+"""
+
+[[modules]]
+id = "pysyft/syft"
+repo = "pysyft"
+paths = ["syft", "pyproject.toml"]
+dists = ["syft"]
+version_file = "syft/version.py"
+focus = """
+The root `syft` package (formerly syft-client, renamed at 0.10.0): compute-to-data file sync
+over an untrusted transport (e.g. Google Drive). Crucible cares about: the client/login API,
+how payloads are encrypted and signed end to end, peer/owner model, anything that changes
+the transport trust assumptions.
+"""
+
+[[modules]]
+id = "pysyft/datasets-permissions"
+repo = "pysyft"
+paths = ["packages/syft-datasets", "packages/syft-perms", "packages/syft-permissions"]
+dists = ["syft-dataset", "syft-perms", "syft-permissions"]
+version_file = "packages/syft-perms/pyproject.toml"
+focus = """
+Dataset publishing (mock vs private data) and access control. Crucible cares about: how a
+private benchmark owner would publish a dataset, how permissions gate reads, and why both
+syft-perms and syft-permissions exist (is one a rename of the other?). Distribution names
+differ from import names (syft-dataset -> syft_datasets).
+"""
+
+[[modules]]
+id = "pysyft/enclave-model-api-example"
+repo = "pysyft"
+paths = ["packages/enclave-model-api-example"]
+dists = []
+version_file = "packages/enclave-model-api-example/pyproject.toml"
+focus = """
+Reference for serving a model inside the enclave behind an API. Crucible cares about: how
+model weights enter the enclave, how inference is exposed to job code, egress assumptions.
+"""
+
+# ── ScreamingFace: the execution engine ─────────────────────────────────────
+
+[[modules]]
+id = "screamingface/engine-benchmarks"
+repo = "screamingface"
+paths = [
+  "apps/screamingface-engine/src/screamingface_engine/benchmarks",
+  "apps/screamingface-engine/src/screamingface_engine_inspect",
+  "apps/screamingface-engine/docs/adding-a-benchmark-manually.md",
+  "apps/screamingface-engine/docs/adding-an-imported-benchmark.md",
+]
+dists = []
+version_file = "apps/screamingface-engine/pyproject.toml"
+focus = """
+The benchmark pipeline Crucible's BenchmarkSpec seam targets. Crucible cares about: the
+spine (scored path, grade_case hook, row reader, verdict parser); failure_policy; the
+BenchmarkRegistry / BenchmarkDeployment / discovered_registrations entry-point plugin socket;
+BenchmarkInstaller and CheckSurface; whether any runtime or PRIVATE-content registration path
+exists yet (today registration is packaging-time and public).
+"""
+
+[[modules]]
+id = "screamingface/engine-core"
+repo = "screamingface"
+paths = [
+  "apps/screamingface-engine/src/screamingface_engine",
+  "apps/screamingface-engine/pyproject.toml",
+  "apps/screamingface-engine/docs/protocol.md",
+  "apps/screamingface-engine/docs/request-workflow.md",
+  "apps/screamingface-engine/docs/execution-flow-diagrams.md",
+]
+exclude = ["apps/screamingface-engine/src/screamingface_engine/benchmarks/*"]
+dists = []
+version_file = "apps/screamingface-engine/pyproject.toml"
+focus = """
+The engine outside the benchmark package: `serve` control plane vs `run` url4-expression mode,
+`serve --local` (one loopback process, no Kubernetes/NATS), runner/worker, protocol, adapters
+and connections. Crucible cares about: running the whole engine inside the enclave with zero
+external egress, and which ports/processes it needs.
+"""
+
+[[modules]]
+id = "screamingface/url4"
+repo = "screamingface"
+paths = ["packages/url4/src", "packages/url4/README.md", "packages/url4/pyproject.toml"]
+dists = ["url4"]
+version_file = "packages/url4/pyproject.toml"
+focus = """
+The url4 expression language and compiler. Crucible cares about: the `url4 serve` config
+format and its _serve loader (the target of Crucible's one-file config emitter, emitter.py);
+expression syntax Crucible emits; anything that would break that emitter.
+"""
+
+[[modules]]
+id = "screamingface/screamingface-client"
+repo = "screamingface"
+paths = ["packages/screamingface/src", "packages/screamingface/README.md", "packages/screamingface/pyproject.toml"]
+dists = ["screamingface"]
+version_file = "packages/screamingface/pyproject.toml"
+focus = """
+The published `screamingface` wheel. Crucible cares about: `screamingface up` (gateway 9105,
+scoreboard 9106, engine 9108), which top-level packages the wheel ships (screamingface,
+aigateway, scoreboard), the client API Crucible calls, and version-string bumps.
+"""
+
+[[modules]]
+id = "screamingface/aigateway"
+repo = "screamingface"
+paths = ["apps/aigateway/src/aigateway", "apps/aigateway/pyproject.toml", "apps/aigateway/README.md"]
+dists = []
+version_file = "apps/aigateway/pyproject.toml"
+focus = """
+The LiteLLM-compatible AI Gateway. Crucible cares about: routing config and how to pin it to
+local model servers only (zero external egress — prompts must never leave the enclave);
+provider config; any default that phones home (telemetry, remote calls).
+"""
+
+# ── inspect: the reference decomposition ────────────────────────────────────
+
+[[modules]]
+id = "inspect_ai/eval-decomposition"
+repo = "inspect_ai"
+paths = [
+  "src/inspect_ai/solver",
+  "src/inspect_ai/scorer",
+  "src/inspect_ai/dataset",
+  "src/inspect_ai/_eval/task",
+]
+dists = []
+version_file = "pyproject.toml"
+focus = """
+The solver/scorer decomposition Crucible's four stages (load -> run -> grade -> aggregate)
+are patterned on. Crucible cares about: the Task / Dataset / Solver / Scorer contracts,
+metric aggregation, and how a scorer sees the target — the shape, not the implementation.
+"""
+
+[[modules]]
+id = "inspect_evals/catalog"
+diagram = false  # an inventory, not a flow
+repo = "inspect_evals"
+paths = ["src/inspect_evals/_registry.py", "CONTRIBUTING.md", "docs/methodology.md"]
+dists = []
+version_file = "pyproject.toml"
+focus = """
+The eval catalog that proves Crucible's seam taxonomy holds. Crucible cares about: how many
+evals exist and how they group by seam shape (dataset + solver + scorer patterns), and the
+conventions an eval follows. Catalog level only — do not read individual evals.
+"""
