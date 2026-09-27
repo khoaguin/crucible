@@ -4,4 +4,61 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "pydantic>=2.13.5",
+    "httpx>=0.27",
+    "loguru>=0.7",
+
+    # github.com/ScreamingFace/screamingface packages (Apache-2.0) — tracked at `main` HEAD, see [tool.uv.sources].
+    "screamingface",
+    "url4",
+
+    # github.com/OpenMined/PySyft packages (Apache-2.0) — tracked at `dev` HEAD, see [tool.uv.sources].
+    # `syft` is the former `syft-client`, renamed at 0.10.0.
+    "syft",
+    "syft-enclave",
+    "syft-dataset",
+    "syft-job",
+    "syft-perms",
+    "syft-permissions",
+    "syft-notebook-ui",
+    "syft-migration",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+]
+
+# Upstreams track branch HEAD during development; freeze each `branch` to a `rev` (or return to
+# PyPI `==` pins) when Crucible ships. uv.lock still records the exact commit resolved, so builds
+# stay reproducible between bumps. Move to the latest HEADs with:
+#   uv lock --upgrade-package screamingface --upgrade-package url4 --upgrade-package syft && uv sync
+[tool.uv]
+# PySyft's packages pin each other to stale exact versions (e.g. syft wants syft-permissions==0.1.15
+# while dev ships 0.1.16); PySyft's own uv workspace ignores those and runs every package at HEAD
+# together. Overriding them here reproduces that; syft-rds is transitive (via syft-enclave).
+override-dependencies = [
+    "syft",
+    "syft-enclave",
+    "syft-dataset",
+    "syft-job",
+    "syft-perms",
+    "syft-permissions",
+    "syft-notebook-ui",
+    "syft-migration",
+    "syft-rds",
+]
+
+[tool.uv.sources]
+screamingface = { git = "https://github.com/ScreamingFace/screamingface", branch = "main", subdirectory = "packages/screamingface" }
+url4 = { git = "https://github.com/ScreamingFace/screamingface", branch = "main", subdirectory = "packages/url4" }
+syft = { git = "https://github.com/OpenMined/PySyft", branch = "dev" }
+syft-enclave = { git = "https://github.com/OpenMined/PySyft", branch = "dev", subdirectory = "packages/syft-enclave" }
+syft-dataset = { git = "https://github.com/OpenMined/PySyft", branch = "dev", subdirectory = "packages/syft-datasets" }
+syft-job = { git = "https://github.com/OpenMined/PySyft", branch = "dev", subdirectory = "packages/syft-job" }
+syft-perms = { git = "https://github.com/OpenMined/PySyft", branch = "dev", subdirectory = "packages/syft-perms" }
+syft-permissions = { git = "https://github.com/OpenMined/PySyft", branch = "dev", subdirectory = "packages/syft-permissions" }
+syft-notebook-ui = { git = "https://github.com/OpenMined/PySyft", branch = "dev", subdirectory = "packages/syft-notebook-ui" }
+syft-migration = { git = "https://github.com/OpenMined/PySyft", branch = "dev", subdirectory = "packages/syft-migration" }
+syft-rds = { git = "https://github.com/OpenMined/PySyft", branch = "dev", subdirectory = "packages/syft-rds" }
