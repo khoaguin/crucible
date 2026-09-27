@@ -7,3 +7,6 @@ __pycache__/
 
 # refs-knowledge: plan snapshot is per-build scratch; the ledger (state.json) is tracked.
 .refs-knowledge/.plan.json
+
+# macOS Finder metadata
+.DS_Store
